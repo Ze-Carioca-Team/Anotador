@@ -1,16 +1,61 @@
-import Button from '@material-ui/core/Button';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Container from '@material-ui/core/Container';
-import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 
-import Creator from './Creator.js';
+import EditText from './EditText.js';
+
+const useStyles = makeStyles({
+    incoming: {
+        background: '#b5d9a7',
+        padding: '18px 20px',
+        lineHeight: '26px',
+        fontSize: '16px',
+        borderRadius: '7px',
+        width: '90%',
+        position: 'relative',
+        '&::after': {
+            bottom: '100%',
+            left: '5%',
+            border: 'solid transparent',
+            content: '" "',
+            height: '0',
+            width: '0',
+            position: 'absolute',
+            pointerEvents: 'none',
+            borderBottomColor: '#b5d9a7',
+            borderWidth: '10px',
+            marginLeft: '-10px',
+          }
+    },
+    outgoing:{
+        background: '#b9d5f0',
+        padding: '18px 18px',
+        lineHeight: '26px',
+        fontSize: '16px',
+        borderRadius: '7px',
+        width: '90%',
+        position: 'relative',
+        '&::after': {
+            bottom: '100%',
+            left: '95%',
+            border: 'solid transparent',
+            content: '" "',
+            height: '0',
+            width: '0',
+            position: 'absolute',
+            pointerEvents: 'none',
+            borderBottomColor: '#b9d5f0',
+            borderWidth: '10px',
+            marginLeft: '-10px',
+          }
+    }
+  });
 
 export default function DialogCard(props){
+    const classes = useStyles();
     function capitalize(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
@@ -18,18 +63,7 @@ export default function DialogCard(props){
         const _opacity = Math.round(Math.min(Math.max(opacity || 1, 0), 1) * 255);
         return color + _opacity.toString(16).toUpperCase();
     }
-    function handleSelectEntity(index){
-        props.setInfo({...props.info, entity: index, intention: -1});
-    }
-    function handleSelectIntention(event,index){
-        event.stopPropagation();
-        if (event.ctrlKey){
-            alert("Not actually deleting intention "+props.info.intentions[index].value)
-        }
-        else{
-            props.setInfo({...props.info, entity: -1, intention: index});
-        }
-    }
+    
     function handleSetIntention(i_turn){
         if(props.info.intention >= 0 && !props.info.meta[props.info.selected].turns[i_turn].intentions.includes(props.info.intention)){
             let newDialogs = props.info.data.dialogs;
@@ -81,77 +115,48 @@ export default function DialogCard(props){
         newMeta[props.info.selected].turns[i_turn].entities = newDelex
         props.setInfo({...props.info, meta: newMeta});
     }
-    console.log(props.info)
+    function editTurn(i_turn){
+        props.setInfo({...props.info, edit: i_turn});
+    }
     return(
-        <Grid item xs={12} style={{paddingBottom:'1rem',paddingTop:'1rem'}}>
-            <Card>
-                <CardContent>
-                    <Typography variant='h6'>
-                        Dialogo Nº{props.info.data.dialogs[props.info.selected].id}
-                    </Typography>
-                    <Grid container direction="column" justifyContent="flex-start" alignItems="stretch" spacing={4}>
-                            <Grid item container direction="row" justifyContent="flex-start" alignItems="flex-end" spacing={1}>
-                                <Grid item style={{width:'5rem'}}>
-                                    <Typography variant="caption" display="block" style={{fontSize:'0.6rem',color:'grey'}}>
-                                        Intenções
-                                    </Typography>
-                                    <Divider light />
-                                </Grid>
-                                <Grid item>
-                                </Grid>
-                            </Grid>
-                            {props.info.data.dialogs[props.info.selected].turns.map((turn, i_turn) => (
-                                <Grid item container direction="row" justifyContent="flex-start" alignItems="flex-end" spacing={1}>
-                                    <Grid item xs={2}>
-                                        {
-                                            props.info.meta[props.info.selected].turns[i_turn].intentions.map((int) => (
-                                                <ButtonBase onClick={()=>{handleRemoveIntention(int,i_turn)}} style={{padding:'1px', border:'thin solid '+props.info.intentions[int].color, borderRadius:'5px'}}>
-                                                    <Typography variant="caption" display="block" style={{fontSize:'0.6rem',color:props.info.intentions[int].color}}>
-                                                        {props.info.intentions[int].value}
-                                                    </Typography>
-                                                </ButtonBase>
-                                            ))
-                                        }
-                                        <ButtonBase onClick={()=>handleSetIntention(i_turn)} style={{padding:'1px 3px 1px 3px', border:'thin solid grey', borderRadius:'5px'}}>
-                                            <Typography variant="caption" display="block" style={{fontSize:'0.6rem',color:'grey'}}>
-                                                +
-                                            </Typography>
-                                        </ButtonBase>
-                                        <Divider light />
-                                    </Grid>
-                                    <Grid item xs={10}>
-                                        <Typography component="p" gutterBottom>
-                                            <b>{capitalize(turn.speaker)}: </b>
-                                                {props.info.meta[props.info.selected].turns[i_turn].entities.split("###").map((entry, i_split) => {
-                                                    if(i_split%2){
-                                                        const i_id = entry.indexOf('&&&')
-                                                        const color = props.info.entities[entry.substring(i_id+3)].color
-                                                        return <span onClick={()=>handleRemoveEntity(i_turn, i_split)} style={{border:'thin solid '+color, borderRadius: '5px', padding:'2px', cursor: 'pointer', color:color}} className='noselect'>{entry.substring(0,i_id)}
-                                                            <span style={{fontSize: '8px', display: 'table-cell', verticalAlign: 'middle', backgroundColor: addAlpha(color,0.3), padding:'2px', borderRadius:'4px'}}>{props.info.entities[entry.substring(i_id+3)].value}</span>
-                                                        </span>
-                                                    }else
-                                                        return <span onMouseUp={()=>handleSetEntity(i_turn,i_split)}>{entry}</span>
-                                                })}
-                                        </Typography>
-                                    </Grid>
-                                </Grid>
-                            ))}
+        <Grid item xs={4} container direction="column" justifyContent="center" alignItems="stretch">
+            {props.info.edit!==-1?<EditText {...props}/>:null}
+            {props.info.data.dialogs[props.info.selected].turns.map((turn, i_turn) => (
+                <Grid item container direction="column" justifyContent="flex-start" alignItems={turn.speaker=='agent'?"flex-start":"flex-end"}>
+                    <Grid item style={{padding:'0.5rem'}}>
+                        <b>{capitalize(turn.speaker)} <span style={{cursor: 'pointer'}} onClick={()=>editTurn(i_turn)}>✎</span></b>
                     </Grid>
-                </CardContent>
-                <Container>
-                    Intenções:
-                    {props.info.intentions.map((entry, index) => (
-                        <Button size="small" variant="outlined" style={{borderColor: entry.color, color: entry.color}} onClick={(event) => handleSelectIntention(event,index)}>{entry.value}</Button>
-                    ))}
-                    <Creator intention {...props}/>
-                    <Divider light />
-                    Entidades:
-                    {props.info.entities.map((entry, index) => (
-                        <Button size="small" variant="outlined" style={{borderColor: entry.color, color: entry.color}} onClick={() => handleSelectEntity(index)}>{entry.value}</Button>
-                    ))}
-                    <Creator entity {...props}/>
-                </Container>
-            </Card>
+                    <Grid xs={12} item className={turn.speaker=='agent'?classes.incoming:classes.outgoing} component={Paper}>
+                        <Typography component="p" gutterBottom>
+                            {props.info.meta[props.info.selected].turns[i_turn].entities.split("###").map((entry, i_split) => {
+                                if(i_split%2){
+                                    const i_id = entry.indexOf('&&&')
+                                    const color = props.info.entities[entry.substring(i_id+3)].color
+                                    return <span onClick={()=>handleRemoveEntity(i_turn, i_split)} style={{border:'thin solid '+color, borderRadius: '5px', padding:'2px', cursor: 'pointer', color:color}} className='noselect'>{entry.substring(0,i_id)}
+                                        <span style={{fontSize: '8px', display: 'table-cell', verticalAlign: 'middle', backgroundColor: addAlpha(color,0.3), padding:'2px', borderRadius:'4px'}}>{props.info.entities[entry.substring(i_id+3)].value}</span>
+                                    </span>
+                                }else
+                                    return <span onMouseUp={()=>handleSetEntity(i_turn,i_split)}>{entry}</span>
+                            })}
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        {props.info.meta[props.info.selected].turns[i_turn].intentions.map((int) => (
+                                <ButtonBase onClick={()=>{handleRemoveIntention(int,i_turn)}} style={{padding:'1px', border:'thin solid '+props.info.intentions[int].color, borderRadius:'5px'}}>
+                                    <Typography variant="caption" display="block" style={{fontSize:'0.6rem',color:props.info.intentions[int].color}}>
+                                        {props.info.intentions[int].value}
+                                    </Typography>
+                                </ButtonBase>
+                            ))
+                        }
+                        <ButtonBase onClick={()=>handleSetIntention(i_turn)} style={{padding:'1px 3px 1px 3px', border:'thin solid grey', borderRadius:'5px'}}>
+                            <Typography variant="caption" display="block" style={{fontSize:'0.6rem',color:'grey'}}>
+                                +
+                            </Typography>
+                        </ButtonBase>
+                    </Grid>
+                </Grid>
+            ))}
         </Grid>
     )
 }

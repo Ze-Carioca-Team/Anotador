@@ -35,6 +35,9 @@ export default function Page() {
       intentions: [],
       count: {active: 0, finished: 0, deleted: 0},
       entity: -1,
+      drawer: false,
+      toolset: 0,
+      edit: -1,
       entities: [],
     });
     function handleStep(nstep){
