@@ -35,8 +35,11 @@ export default function Page() {
       intentions: [],
       count: {active: 0, finished: 0, deleted: 0},
       entity: -1,
+      topic: -1,
+      topics: [],
       drawer: false,
-      toolset: 0,
+      toolsetOpen: false,
+      toolsetSelected: 0,
       edit: -1,
       entities: [],
     });
@@ -46,6 +49,7 @@ export default function Page() {
     const sendInfo = {info, setInfo}
     return (
         <MuiThemeProvider theme={themeLight}>
+            {console.log(info)}
             <CssBaseline />
             <div style={{minHeight:'97vh'}}>
                 <Container maxWidth="lg">

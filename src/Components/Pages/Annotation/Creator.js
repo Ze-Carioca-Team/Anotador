@@ -17,15 +17,21 @@ export default function Creator(props) {
     const [open, setOpen] = React.useState(false);
     const [creation, setCreation] = React.useState({color: randomColor({luminosity: 'dark'}), value: ''})
     function handleCreate(){
-        if(props.entity && !props.intention){
+        if(props.entity && !props.intention && !props.topic){
             let newEntities = props.info.entities;
             newEntities.push(creation);
-            props.setInfo({...props.info, entities: newEntities});
+            props.setInfo({...props.info, toolsetOpen: false, entities: newEntities, entity: newEntities.length-1});
         }
-        else if(props.intention){
+        else if(props.intention  && !props.entity && !props.topic){
             let newIntentions = props.info.intentions;
             newIntentions.push(creation);
-            props.setInfo({...props.info, intentions: newIntentions});
+            props.setInfo({...props.info, toolsetOpen: false, intentions: newIntentions, intention: newIntentions.length-1});
+        }
+        else if(props.topic  && !props.entity && !props.intention){
+            let newTopics = props.info.topics;
+            newTopics.push(creation);
+            props.setInfo({...props.info, toolsetOpen: false, topics: newTopics, topic: newTopics.length-1});
+        
         }
     }
     function close(){
@@ -34,7 +40,7 @@ export default function Creator(props) {
     }
     return(
         <>
-            <IconButton size='small' onClick={() => {setOpen(true)}}>
+            <IconButton size='small' onClick={() => {setOpen(true)}}  style={{borderRadius:'0'}}>
                 <AddCircleOutlineIcon />
             </IconButton>
             <Dialog
@@ -43,7 +49,7 @@ export default function Creator(props) {
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
                 >
-                <DialogTitle id="alert-dialog-title">{"Criar " + (props.entity? "Entidade" : "Intenção")}</DialogTitle>
+                <DialogTitle id="alert-dialog-title">{"Criar " + (props.entity? "Entidade" : props.intention==1? "Intenção" : "Domínio")}</DialogTitle>
                 <DialogContent>
                     <Grid container direction="row" justifyContent="flex-start" alignItems="center" spacing={1}>
                             <Grid item>
@@ -59,7 +65,7 @@ export default function Creator(props) {
                         autoFocus
                         margin="dense"
                         id="intention"
-                        label={"Nome da " + (props.entity? "Entidade" : "Intenção")}
+                        label={props.entity==1? "Nome da Entidade" : props.intention==1? "Nome da Intenção" : "Nome do Domínio"}
                         fullWidth
                         onChange={event => setCreation({...creation, value: event.target.value})}
                         />

@@ -170,6 +170,7 @@ export default function UploadPage(props) {
                 }
                 turnmeta.push({
                     intentions: intention_list,
+                    topic: -1,
                     entities: newDelex?newDelex:json_data.dialogs[d].turns[t].utterance
                 })
             }

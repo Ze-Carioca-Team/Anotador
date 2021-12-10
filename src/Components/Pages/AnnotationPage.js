@@ -1,4 +1,5 @@
 import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
@@ -39,35 +40,24 @@ export default function Annotation(props) {
     const openDrawer = () => {
         props.setInfo({...props.info, drawer: true});
     }
+    const dialogUp = () => {
+        props.setInfo({...props.info, selected: props.info.selected+1});
+    }
+    const dialogDown = () => {
+        props.setInfo({...props.info, selected: props.info.selected-1});
+    }
     return(
         <Grid item container xs={12} direction="column" justifyContent="center" alignItems="center" spacing={1} style={{paddingTop:'1rem'}}>       
             <Tables {...props}/>
             <Toolset {...props}/>
                 {props.info.selected!==-1?
-                <React.Fragment>
                     <Grid item>
-                        <Typography>
-                            Dialogo Nº{props.info.data.dialogs[props.info.selected].id}
-                        </Typography>
+                        <ButtonGroup color="primary" aria-label="outlined primary button group">
+                            <Button disabled={props.info.selected===0} onClick={dialogDown}>{'<'}</Button>
+                            <Button disabled>Dialogo Nº{props.info.data.dialogs[props.info.selected].id}</Button>
+                            <Button disabled={props.info.selected===props.info.data.dialogs.length-1} onClick={dialogUp}>{'>'}</Button>
+                        </ButtonGroup>
                     </Grid>
-                    <Grid item>
-                        <FormControl variant="outlined"  className={classes.formControl}>
-                            <InputLabel id="demo-simple-select-outlined-label">Domínio</InputLabel>
-                            <Select
-                            labelId="demo-simple-select-outlined-label"
-                            id="demo-simple-select-outlined"
-                            value={domain}
-                            onChange={changeDomain}
-                            label="Domínio"
-                            >
-                            <MenuItem value=''>Nenhum</MenuItem>
-                            {props.info.intentions.map((entry,index)=>
-                                <MenuItem value={entry.value}>{entry.value}</MenuItem>
-                            )}
-                            </Select>
-                        </FormControl>
-                    </Grid>
-                </React.Fragment>
                 :
                     <Grid item>
                         <Button variant="outlined" onClick={openDrawer}>
@@ -78,6 +68,17 @@ export default function Annotation(props) {
             {props.info.selected!==-1?
                 <DialogCard {...props}/>
             :
+                null
+            }
+            {props.info.selected!==-1?
+                <Grid item>
+                    <ButtonGroup color="primary" aria-label="outlined primary button group">
+                        <Button disabled={props.info.selected===0} onClick={dialogDown}>{'<'}</Button>
+                        <Button disabled>Dialogo Nº{props.info.data.dialogs[props.info.selected].id}</Button>
+                        <Button disabled={props.info.selected===props.info.data.dialogs.length-1} onClick={dialogUp}>{'>'}</Button>
+                    </ButtonGroup>
+                </Grid>
+                :
                 null
             }
         </Grid>

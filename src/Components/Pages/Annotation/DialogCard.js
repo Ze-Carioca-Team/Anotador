@@ -1,4 +1,5 @@
 import ButtonBase from '@material-ui/core/ButtonBase';
+import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -7,9 +8,12 @@ import Typography from '@material-ui/core/Typography';
 
 import EditText from './EditText.js';
 
+const incomingHex = '#E8E8E8'; // '#b5d9a7'
+const outgoingHex = '#C8C8C8'; // '#b9d5f0'
+
 const useStyles = makeStyles({
     incoming: {
-        background: '#b5d9a7',
+        background: incomingHex,
         padding: '18px 20px',
         lineHeight: '26px',
         fontSize: '16px',
@@ -25,13 +29,13 @@ const useStyles = makeStyles({
             width: '0',
             position: 'absolute',
             pointerEvents: 'none',
-            borderBottomColor: '#b5d9a7',
+            borderBottomColor: incomingHex,
             borderWidth: '10px',
             marginLeft: '-10px',
           }
     },
     outgoing:{
-        background: '#b9d5f0',
+        background: outgoingHex,
         padding: '18px 18px',
         lineHeight: '26px',
         fontSize: '16px',
@@ -47,7 +51,7 @@ const useStyles = makeStyles({
             width: '0',
             position: 'absolute',
             pointerEvents: 'none',
-            borderBottomColor: '#b9d5f0',
+            borderBottomColor: outgoingHex,
             borderWidth: '10px',
             marginLeft: '-10px',
           }
@@ -118,13 +122,47 @@ export default function DialogCard(props){
     function editTurn(i_turn){
         props.setInfo({...props.info, edit: i_turn});
     }
+    function setTopic(i_turn){
+        if(props.info.topic >= 0){
+            let newMeta = props.info.meta
+            newMeta[props.info.selected].turns[i_turn].topic = props.info.topic;
+            props.setInfo({...props.info, meta: newMeta});
+        }
+    }
+    function checkPreviousTopic(i_turn){
+        const topic = props.info.meta[props.info.selected].turns[i_turn].topic
+        const previousTopic = props.info.meta[props.info.selected].turns[i_turn-1] ? props.info.meta[props.info.selected].turns[i_turn-1].topic : -1
+        return topic !==-1 && (previousTopic !== topic)
+    }
+    function checkFutureTopic(i_turn){
+        const topic = props.info.meta[props.info.selected].turns[i_turn].topic
+        const futureTopic = props.info.meta[props.info.selected].turns[i_turn+1] ? props.info.meta[props.info.selected].turns[i_turn+1].topic : -1
+        return topic !==-1 && (futureTopic !== topic)
+    }
     return(
         <Grid item xs={4} container direction="column" justifyContent="center" alignItems="stretch">
             {props.info.edit!==-1?<EditText {...props}/>:null}
             {props.info.data.dialogs[props.info.selected].turns.map((turn, i_turn) => (
                 <Grid item container direction="column" justifyContent="flex-start" alignItems={turn.speaker=='agent'?"flex-start":"flex-end"}>
+                    {checkPreviousTopic(i_turn)?
+                        <Grid item container style={{position: 'relative'}} xs={12}>
+                            <div style={{width: '100%', height: '10px', borderBottom: '1px solid '+props.info.topics[props.info.meta[props.info.selected].turns[i_turn].topic].color, textAlign: 'center'}}>
+                                <span style={{backgroundColor: 'white', padding: '0 1rem', color: props.info.topics[props.info.meta[props.info.selected].turns[i_turn].topic].color}}>
+                                    {props.info.topics[props.info.meta[props.info.selected].turns[i_turn].topic].value}
+                                </span>
+                            </div>
+                            <Divider/>
+                        </Grid>
+                    :
+                        null
+                    } 
                     <Grid item style={{padding:'0.5rem'}}>
-                        <b>{capitalize(turn.speaker)} <span style={{cursor: 'pointer'}} onClick={()=>editTurn(i_turn)}>✎</span></b>
+                        <b>
+                            {turn.speaker=='agent'?capitalize(turn.speaker):null}
+                            <span style={{cursor: 'pointer'}} onClick={()=>editTurn(i_turn)}> ✎ </span>
+                            <span style={{cursor: 'pointer'}} onClick={()=>setTopic(i_turn)}> 📌 </span>
+                            {turn.speaker=='client'?capitalize(turn.speaker):null}
+                        </b>
                     </Grid>
                     <Grid xs={12} item className={turn.speaker=='agent'?classes.incoming:classes.outgoing} component={Paper}>
                         <Typography component="p" gutterBottom>
@@ -155,6 +193,15 @@ export default function DialogCard(props){
                             </Typography>
                         </ButtonBase>
                     </Grid>
+                    {checkFutureTopic(i_turn)?
+                        <Grid item container style={{position: 'relative'}} xs={12}>
+                            <div style={{width: '100%', height: '10px', borderBottom: '1px solid '+props.info.topics[props.info.meta[props.info.selected].turns[i_turn].topic].color, textAlign: 'center'}}>
+                            </div>
+                            <Divider/>
+                        </Grid>
+                    :
+                        null
+                    }  
                 </Grid>
             ))}
         </Grid>

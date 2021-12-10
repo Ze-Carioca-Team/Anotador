@@ -14,13 +14,15 @@ export default function EditText(props){
     };
     function getText(){
         let text = props.info.meta[props.info.selected].turns[props.info.edit].entities;
-        console.log(
-            text.split("&&&").map(entry => entry).join('').replace("###","")
-        )
-        return text
+        return text.split("&&&").map((entry,i) => i!==0?entry.slice(entry.indexOf('###')):entry).join('').replaceAll("###","")
     }
     const close = () => {
         props.setInfo({...props.info, edit:-1});
+    };
+    const reload = () => {
+        let newMeta = props.info.meta;
+        newMeta[props.info.selected].turns[props.info.edit].entities = props.info.data.dialogs[props.info.selected].turns[props.info.edit].utterance;
+        props.setInfo({...props.info, meta: newMeta, edit:-1});
     };
     const save = () => {
         let newMeta = props.info.meta;
@@ -42,11 +44,14 @@ export default function EditText(props){
             />
         </DialogContent>
         <DialogActions>
+            <Button onClick={reload} color="primary">
+                Recarregar
+            </Button>
             <Button onClick={close} color="primary">
-            Cancelar
+                Cancelar
             </Button>
             <Button onClick={save} color="primary">
-            Salvar
+                Salvar
             </Button>
         </DialogActions>
         </Dialog>
