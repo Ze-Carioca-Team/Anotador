@@ -1,17 +1,6 @@
-import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
-import Drawer from '@material-ui/core/Drawer';
-import Divider from '@material-ui/core/Divider';
-import Fab from '@material-ui/core/Fab';
-import { makeStyles} from '@material-ui/core/styles';
-import NavigationIcon from '@material-ui/icons/Navigation';
 import React from 'react';
 
-import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import CreateIcon from '@material-ui/icons/Create';
-import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
-import Typography from '@material-ui/core/Typography';
-import CasinoIcon from '@material-ui/icons/Casino';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
@@ -33,7 +22,7 @@ export default function DialogToolset(props) {
     }
     return(
         <React.Fragment>
-                {props.info.toolsetSelected==1?
+                {props.info.toolsetSelected===1?
                     <React.Fragment>
                     <Creator intention {...props}/>
                     <List dense='True'>
@@ -50,7 +39,7 @@ export default function DialogToolset(props) {
                         ))}
                     </List>
                     </React.Fragment>
-                :props.info.toolsetSelected==0?
+                :props.info.toolsetSelected===0?
                     <React.Fragment>
                         <Creator entity {...props}/>
                         <List dense='True'>

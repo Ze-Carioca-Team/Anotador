@@ -12,16 +12,13 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Footer from './Common/Footer.js';
 import TitleToolbar from './Common/TitleToolbar.js';
 import AnnotationPage from './Pages/AnnotationPage.js';
+import LearningPage from './Pages/LearningPage.js';
 import DownloadPage from './Pages/DownloadPage.js';
 import UploadPage from './Pages/UploadPage.js';
 import ErrorPage from './Pages/ErrorPage.js';
 
 const themeLight = createTheme({
-    palette: {
-        background: {
-            default: "#ffff"
-        },
-    }
+    
 });
 
 export default function Page() {
@@ -60,11 +57,14 @@ export default function Page() {
                         <main>
                             <Grid container xs={12} direction="column" justifyContent="flex-start" alignItems="center">
                                 <Grid item xs={6}>
-                                    <Stepper activeStep={info.step} alternativeLabel>
+                                    <Stepper activeStep={info.step} alternativeLabel style={{ backgroundColor: "transparent" }}>
                                         <Step key={0}>
                                             <StepLabel>Anotador</StepLabel>
                                         </Step>
                                         <Step key={1}>
+                                            <StepLabel>Active Learning</StepLabel>
+                                        </Step>
+                                        <Step key={2}>
                                             <StepLabel>Baixar</StepLabel>
                                         </Step>
                                     </Stepper>
@@ -72,12 +72,14 @@ export default function Page() {
                                 <Grid item xs={12}>
                                     <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
                                         <Button onClick={() => {handleStep(info.step-1)}}>Voltar</Button>
-                                        <Button disabled={info.step>=1} onClick={() => {handleStep(info.step+1)}}>Avançar</Button>
+                                        <Button disabled={info.step>=2} onClick={() => {handleStep(info.step+1)}}>Avançar</Button>
                                     </ButtonGroup>
                                 </Grid>
                                 {info.step === 0?
                                     <AnnotationPage {...sendInfo}/>
                                 :info.step === 1?
+                                    <LearningPage {...sendInfo}/>
+                                :info.step === 2?
                                     <DownloadPage {...sendInfo}/>
                                 :
                                     <ErrorPage />

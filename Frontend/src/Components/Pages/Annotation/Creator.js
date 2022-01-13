@@ -49,7 +49,7 @@ export default function Creator(props) {
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
                 >
-                <DialogTitle id="alert-dialog-title">{"Criar " + (props.entity? "Entidade" : props.intention==1? "Intenção" : "Domínio")}</DialogTitle>
+                <DialogTitle id="alert-dialog-title">{"Criar " + (props.entity? "Entidade" : props.intention? "Intenção" : "Domínio")}</DialogTitle>
                 <DialogContent>
                     <Grid container direction="row" justifyContent="flex-start" alignItems="center" spacing={1}>
                             <Grid item>
@@ -65,7 +65,7 @@ export default function Creator(props) {
                         autoFocus
                         margin="dense"
                         id="intention"
-                        label={props.entity==1? "Nome da Entidade" : props.intention==1? "Nome da Intenção" : "Nome do Domínio"}
+                        label={props.entity? "Nome da Entidade" : props.intention? "Nome da Intenção" : "Nome do Domínio"}
                         fullWidth
                         onChange={event => setCreation({...creation, value: event.target.value})}
                         />

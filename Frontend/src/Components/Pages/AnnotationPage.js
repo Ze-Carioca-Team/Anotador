@@ -1,42 +1,13 @@
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-
-
-import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-
-import Select from '@material-ui/core/Select';
 
 import DialogCard from './Annotation/DialogCard.js';
 import Tables from './Annotation/Tables.js';
 import Toolset from './Annotation/Toolset.js';
 
-const useStyles = makeStyles((theme) => ({
-    formControl: {
-      margin: theme.spacing(1),
-      minWidth: 120,
-    },
-    selectEmpty: {
-      marginTop: theme.spacing(2),
-    },
-  }));
-
-
 export default function Annotation(props) {
-    const classes = useStyles();
-    const [domain, setDomain] = React.useState('');
-    const changeDomain = (event) => {
-        setDomain(event.target.value);
-      };
     const openDrawer = () => {
         props.setInfo({...props.info, drawer: true});
     }

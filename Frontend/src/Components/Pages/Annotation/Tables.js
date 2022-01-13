@@ -1,6 +1,6 @@
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import Drawer from '@material-ui/core/Drawer';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';

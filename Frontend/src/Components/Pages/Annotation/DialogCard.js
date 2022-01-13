@@ -143,7 +143,7 @@ export default function DialogCard(props){
         <Grid item xs={4} container direction="column" justifyContent="center" alignItems="stretch">
             {props.info.edit!==-1?<EditText {...props}/>:null}
             {props.info.data.dialogs[props.info.selected].turns.map((turn, i_turn) => (
-                <Grid item container direction="column" justifyContent="flex-start" alignItems={turn.speaker=='agent'?"flex-start":"flex-end"}>
+                <Grid item container direction="column" justifyContent="flex-start" alignItems={turn.speaker==='agent'?"flex-start":"flex-end"}>
                     {checkPreviousTopic(i_turn)?
                         <Grid item container style={{position: 'relative'}} xs={12}>
                             <div style={{width: '100%', height: '10px', borderBottom: '1px solid '+props.info.topics[props.info.meta[props.info.selected].turns[i_turn].topic].color, textAlign: 'center'}}>
@@ -158,13 +158,13 @@ export default function DialogCard(props){
                     } 
                     <Grid item style={{padding:'0.5rem'}}>
                         <b>
-                            {turn.speaker=='agent'?capitalize(turn.speaker):null}
+                            {turn.speaker==='agent'?capitalize(turn.speaker):null}
                             <span style={{cursor: 'pointer'}} onClick={()=>editTurn(i_turn)}> ✎ </span>
                             <span style={{cursor: 'pointer'}} onClick={()=>setTopic(i_turn)}> 📌 </span>
-                            {turn.speaker=='client'?capitalize(turn.speaker):null}
+                            {turn.speaker==='client'?capitalize(turn.speaker):null}
                         </b>
                     </Grid>
-                    <Grid xs={12} item className={turn.speaker=='agent'?classes.incoming:classes.outgoing} component={Paper}>
+                    <Grid xs={12} item className={turn.speaker==='agent'?classes.incoming:classes.outgoing} component={Paper}>
                         <Typography component="p" gutterBottom>
                             {props.info.meta[props.info.selected].turns[i_turn].entities.split("###").map((entry, i_split) => {
                                 if(i_split%2){
