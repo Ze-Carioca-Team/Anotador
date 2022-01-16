@@ -39,6 +39,9 @@ export default function Page() {
       toolsetSelected: 0,
       edit: -1,
       entities: [],
+      learning: -1,
+      dataLearning: {},
+      metaLearning: [],
     });
     function handleStep(nstep){
       setInfo({...info, step: nstep});
