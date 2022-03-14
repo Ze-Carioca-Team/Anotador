@@ -43,7 +43,7 @@ function SideCard(props){
   return(
     <Grid item xs={6}>
       <Card xs={6}>
-        <CardActionArea>
+        <CardActionArea href={"https://unicamp-cit.notion.site/unicamp-cit/CI-T-Unicamp-ca7a3fc10d9a43f09a14c5dd4d31e554"}>
           <div style={{display: 'flex'}}>
             <CardMedia style={{width: 100}} image={props.image}/>
             <div style={{display: 'flex', flexDirection: 'column'}}>
