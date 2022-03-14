@@ -8,6 +8,9 @@ import Typography from '@material-ui/core/Typography';
 
 import EditText from './EditText.js';
 
+
+
+
 const incomingHex = '#E8E8E8'; // '#b5d9a7'
 const outgoingHex = '#C8C8C8'; // '#b9d5f0'
 

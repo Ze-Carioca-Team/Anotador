@@ -29,6 +29,7 @@ import Typography from '@material-ui/core/Typography';
 
 import {DropzoneAreaBase} from 'material-ui-dropzone';
 import randomColor from 'randomcolor';
+import { ifStatement } from '@babel/types';
 
 const useStyles = makeStyles((theme) => ({
     dropzone: {
@@ -126,88 +127,90 @@ export default function UploadPage(props) {
     }
     function handleConfirm(){
         let json_data = settings.data
-        // TODO depois corrige isso aqui pra nao descartar dialogos
-        // json_data.dialogs = json_data.dialogs.slice(settings.range[0],settings.range[1]);
         let meta = []
         let count = {active: json_data.dialogs.length, finished: 0, deleted: 0}
+        let entities = []
+        let intentions = []
         let entities_id = Object.keys(json_data.ontology['slot-values']);
-        let entities = entities_id.map((value) => ({color: randomColor({luminosity: 'dark'}), value: value}))
+        entities = entities_id.map((value) => ({color: randomColor({luminosity: 'dark'}), value: value}))
         let intentions_id = json_data.ontology.intents.concat(json_data.ontology.actions);
         intentions_id = [...new Set(intentions_id)].sort();
-        let intentions = intentions_id.map((value) => ({color: randomColor({luminosity: 'dark'}), value: value}))
-        console.log(json_data.dialogs.length);
-        for(let d=0;d<json_data.dialogs.length;d++){
-            let turnmeta = []
-            let int = 0;
-            let ent = 0;
-            for(let t=0;t<json_data.dialogs[d].turns.length;t++){
-                let turn = json_data.dialogs[d].turns[t]
-                // Parte das intenções
-                let intent_name = turn.speaker==="client"?"intent":"action";
-                let intents_str = turn[intent_name]
-                let intention_list = []
-                if(intents_str&&intents_str!==""){
-                    let intents = turn[intent_name].replace("]","").split("[");
-                    // Criar intenção que não está na lista
-                    for(let i=0;i<intents.length;i++){
-                        let intent = intents[i].replace("]","")
-                        if(intent!==''){
-                            if(!intentions_id.includes(intent)){
-                                intentions_id.push(intent)
-                                intentions.push({color: randomColor({luminosity: 'dark'}), value: intent})
-                            }
-                            intention_list.push(intentions_id.indexOf(intent));
-                            int++;
-                        }
-                    }
-                }
-                // Parte das entidades
-                let newDelex = '';
-                if(turn.utterance_delex){
-                    let oldDelex = turn.utterance_delex;
-                    let oldDelex_split = oldDelex.split('[')
-                    for(let i=0;i<oldDelex_split.length;i++){
-                        let end = oldDelex_split[i].indexOf(']')
-                        if(end!==-1){
-                            let entity = oldDelex_split[i].substring(0,end);
-                            let value = turn["slot-values"][entity]
-                            if(!entities_id.includes(entity)){
-                                entities_id.push(entity)
-                                entities.push({color: randomColor({luminosity: 'dark'}), value: entity})
-                            }
-                            let entity_id = entities_id.indexOf(entity)
-                            if(Array.isArray(value)){
-                                newDelex = newDelex + '###'+value.shift()+'&&&'+entity_id+'###'+oldDelex_split[i].substring(end+1)
-                            }
-                            else{
-                                newDelex = newDelex + '###'+value+'&&&'+entity_id+'###'+oldDelex_split[i].substring(end+1)
-                            }
-                            ent++;
-                        }
-                        else{
-                            newDelex = newDelex + oldDelex_split[i]
-                        }
-                    }
-                }
-                turnmeta.push({
-                    intentions: intention_list,
-                    topic: -1,
-                    entities: newDelex?newDelex:json_data.dialogs[d].turns[t].utterance
-                })
-            }
-            meta.push({int: int, ent: ent, status:"active", turns: turnmeta})
+        intentions = intentions_id.map((value) => ({color: randomColor({luminosity: 'dark'}), value: value}))
+        if(settings.todo.import_file){
+          for(let d=0;d<json_data.dialogs.length;d++){
+              let turnmeta = []
+              let int = 0;
+              let ent = 0;
+              for(let t=0;t<json_data.dialogs[d].turns.length;t++){
+                  let turn = json_data.dialogs[d].turns[t]
+                  // Parte das intenções
+                  let intent_name = turn.speaker==="client"?"intent":"action";
+                  let intents_str = turn[intent_name]
+                  let intention_list = []
+                  if(intents_str&&intents_str!==""){
+                      let intents = turn[intent_name].replace("]","").split("[");
+                      // Criar intenção que não está na lista
+                      for(let i=0;i<intents.length;i++){
+                          let intent = intents[i].replace("]","")
+                          if(intent!==''){
+                              if(!intentions_id.includes(intent)){
+                                  intentions_id.push(intent)
+                                  intentions.push({color: randomColor({luminosity: 'dark'}), value: intent})
+                              }
+                              intention_list.push(intentions_id.indexOf(intent));
+                              int++;
+                          }
+                      }
+                  }
+                  // Parte das entidades
+                  let newDelex = '';
+                  if(turn.utterance_delex){
+                      let oldDelex = turn.utterance_delex;
+                      let oldDelex_split = oldDelex.split('[')
+                      for(let i=0;i<oldDelex_split.length;i++){
+                          let end = oldDelex_split[i].indexOf(']')
+                          if(end!==-1){
+                              let entity = oldDelex_split[i].substring(0,end);
+                              let value = turn["slot-values"][entity]
+                              if(!entities_id.includes(entity)){
+                                  entities_id.push(entity)
+                                  entities.push({color: randomColor({luminosity: 'dark'}), value: entity})
+                              }
+                              let entity_id = entities_id.indexOf(entity)
+                              if(Array.isArray(value)){
+                                  newDelex = newDelex + '###'+value.shift()+'&&&'+entity_id+'###'+oldDelex_split[i].substring(end+1)
+                              }
+                              else{
+                                  newDelex = newDelex + '###'+value+'&&&'+entity_id+'###'+oldDelex_split[i].substring(end+1)
+                              }
+                              ent++;
+                          }
+                          else{
+                              newDelex = newDelex + oldDelex_split[i]
+                          }
+                      }
+                  }
+                  turnmeta.push({
+                      intentions: intention_list,
+                      topic: -1,
+                      entities: newDelex?newDelex:json_data.dialogs[d].turns[t].utterance
+                  })
+              }
+              meta.push({int: int, ent: ent, status:"active", turns: turnmeta})
+          }
         }
-        props.setInfo({...props.info, entities: entities, intentions: intentions, filename: settings.filename, data: json_data, meta: meta, count: count, step: 0});
-        setSettings({
-            todo: {
-                manual: true,
-                verification: false,
-                download: false,
-            },
-            data: {dialogs: []},
-            open: false,
-            dialogs: 0,
-        })
+        else{
+          for(let d=0;d<json_data.dialogs.length;d++){
+            let turnmeta = [];
+            for(let t=0;t<json_data.dialogs[d].turns.length;t++){
+              let turn = json_data.dialogs[d].turns[t]
+              turnmeta.push({intentions: [],topic: -1,entities: turn.utterance})
+            }
+            meta.push({int: 0, ent: 0, status:"active", turns: turnmeta})
+          }
+        }
+        props.setInfo({...props.info, selected: 0, entities: entities, intentions: intentions, filename: settings.filename, data: json_data, meta: meta, count: count, step: 0});
+        setSettings({...settings, data: {dialogs: []}})
     }
     return(
         <main className={classes.dropzone}>
@@ -235,9 +238,7 @@ export default function UploadPage(props) {
                             control={<Checkbox checked={settings.todo.import_file} onChange={handleTodo} color="primary" name="import_file" />}
                             label="Importar Entidades e Intenções do Arquivo"
                             />
-                          <Typography variant="caption">
-                            Detectamos que o arquivo já possui entidades e intenções
-                          </Typography>
+                          <FormHelperText>Detectamos que o arquivo já possui entidades e intenções</FormHelperText>
                           <FormControlLabel
                             control={<Checkbox checked={settings.todo.import_default} onChange={handleTodo} color="primary" name="import_default" />}
                             label="Usar Entidades e Intenções Existentes"
@@ -280,7 +281,7 @@ export default function UploadPage(props) {
                             control={<Checkbox checked={settings.todo.manual} onChange={handleTodo} color="primary" name="manual" />}
                             label="Anotação Manual"
                             />
-                            {settings.todo.manual?
+                            {/* {settings.todo.manual?
                                 <React.Fragment>
                                     <Slider value={settings.range} onChange={handleRange}
                                         step={1}
@@ -293,7 +294,7 @@ export default function UploadPage(props) {
                                         Você anotará <b>{Math.floor(settings.range[1]-settings.range[0])}</b> dialogos (ID{settings.data.dialogs[settings.range[0]]?settings.data.dialogs[settings.range[0]].id:0} - ID{settings.data.dialogs[settings.range[1]]?settings.data.dialogs[settings.range[1]].id:0})
                                     </Typography>
                                 </React.Fragment>
-                            :null}
+                            :null} */}
                             <FormControlLabel label="Active Learning" control={<Checkbox checked={settings.todo.verification} onChange={handleTodo} color="primary" name="verification" />}/>
                             {settings.todo.verification?
                               <React.Fragment>

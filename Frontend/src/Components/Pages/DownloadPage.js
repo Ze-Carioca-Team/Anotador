@@ -1,8 +1,21 @@
 import Button from '@material-ui/core/Button';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Grid from '@material-ui/core/Grid';
+import ListIcon from '@material-ui/icons/List';
+import { purple } from '@material-ui/core/colors';
+import { withStyles} from '@material-ui/core/styles';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+
+const ColorButton = withStyles((theme) => ({
+    root: {
+      color: theme.palette.getContrastText(purple[500]),
+      backgroundColor: purple[700],
+      '&:hover': {
+        backgroundColor: purple[900],
+      },
+    },
+  }))(Button);
 
 export default function DownloadPage(props) {
     // Terminar na V0:
@@ -105,18 +118,18 @@ export default function DownloadPage(props) {
     }
     return(
         <Grid item container direction="column" justifyContent="center" alignItems="center">
-            <Typography style={{paddingTop:'13rem',paddingBottom:'2rem'}}>
-                Parabéns, seu dataset está anotado!
+            <Typography style={{paddingTop:'5rem',paddingBottom:'1rem'}}>
+                Seu dataset está anotado! Você pode baixar seu dataset e continuar editando outros arquivos.
             </Typography>
-            <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                startIcon={<GetAppIcon />}
-                onClick={() => download()}
-                >
+            <Button variant="contained" color="primary" size="large" startIcon={<GetAppIcon />} onClick={() => download()}>
                 Download
             </Button>
+            <Typography style={{paddingTop:'1rem',paddingBottom:'1rem'}}>
+                Ajude também respondendo o questionário de usabilidade:
+            </Typography>
+            <ColorButton variant="contained" color="primary" size="large" startIcon={<ListIcon />} href="https://forms.gle/VewHUNnYB8JX71E26">
+                Questionário
+            </ColorButton>
         </Grid>
     )
 }

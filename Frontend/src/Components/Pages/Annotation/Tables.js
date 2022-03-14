@@ -7,10 +7,16 @@ import Tab from '@material-ui/core/Tab';
 import Fab from '@material-ui/core/Fab';
 import DialogTable from './DialogTable.js';
 
+
 const useStyles = makeStyles((theme) => ({
     fab_dialogue: {
         position: 'fixed',
         bottom: theme.spacing(4),
+        left: theme.spacing(4),
+    },
+    fab_learning: {
+        position: 'fixed',
+        bottom: theme.spacing(12),
         left: theme.spacing(4),
     },
     margin: {
@@ -46,7 +52,7 @@ export default function Tables(props) {
                 :table===1?<DialogTable type="finished" {...props} />
                 :<DialogTable type="deleted" {...props} />}
             </Drawer>
-            <Fab variant="extended" onClick={openDrawer} className={classes.fab_dialogue}>
+            <Fab variant="extended" className={classes.fab_dialogue}>
                 <ChatBubbleOutlineIcon className={classes.margin}/>
                 Dialogos {props.info.count.finished}/{props.info.count.active+props.info.count.finished}
             </Fab>
