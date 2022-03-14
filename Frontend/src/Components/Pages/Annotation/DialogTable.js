@@ -43,7 +43,7 @@ export default function DialogTable(props){
             {props.info.data.dialogs.map((entry, index) => {
                 if(props.type===props.info.meta[index].status) 
                     return(
-                        <ListItem>
+                        <ListItem selected={index===props.info.selected}>
                             <ListItemText primary={"ID"+entry.id}/>
                             <ListItemSecondaryAction>
                                 <IconButton size='small' onClick={()=>select(index)}>

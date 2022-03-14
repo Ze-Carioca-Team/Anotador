@@ -1,14 +1,28 @@
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Checkbox from '@material-ui/core/Checkbox';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import FormGroup from '@material-ui/core/FormGroup';
+import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormHelperText from '@material-ui/core/FormHelperText';
 import Grid from '@material-ui/core/Grid';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import IconButton from '@material-ui/core/IconButton';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import { makeStyles } from '@material-ui/core/styles';
+import MenuItem from '@material-ui/core/MenuItem';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
 import React from 'react';
+import Select from '@material-ui/core/Select';
 import Slider from '@material-ui/core/Slider';
 import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
@@ -21,34 +35,41 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '1rem',
         margin: 'auto',
         maxWidth: '50rem',
-        textAlign: 'center'
-    },
-    card: {
-        textAlign: 'left'   
-    },
-    continueButton: {
-        marginTop: '1rem',
+        textAlign: 'center',
     },
 }));
+function SideCard(props){
+  return(
+    <Grid item xs={6}>
+      <Card xs={6}>
+        <CardActionArea>
+          <div style={{display: 'flex'}}>
+            <CardMedia style={{width: 100}} image={props.image}/>
+            <div style={{display: 'flex', flexDirection: 'column'}}>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {props.title}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {props.text}
+                </Typography>
+              </CardContent>
+            </div>
+          </div>
+        </CardActionArea>
+      </Card>
+    </Grid>
+  )
+}
 
-function IntroCard(props){
-    const classes = useStyles();
+function Cards(){
     return(
-        <Grid item xs={12} md={6}>
-            <Card className={classes.card}>
-                <CardContent>
-                    <Typography component="h2" variant="h5">
-                        {props.title}
-                    </Typography>
-                    <Typography variant="subtitle1" color="textSecondary">
-                        {props.subtitle}
-                    </Typography>
-                    <Typography variant="subtitle1" color="primary">
-                        Ler mais
-                    </Typography>
-                </CardContent>
-            </Card>
-        </Grid>
+      <Grid container direction="row" justifyContent="center" alignItems="center" spacing={2} style={{paddingBottom: '2rem', textAlign: 'left'}}>   
+        <SideCard title="Tutorial" text="Aprenda a usar a ferramenta" image="https://www.pythontutorial.net/wp-content/uploads/2020/11/tkinter-tutorial.png"/>
+        <SideCard title="Metodologia" text="Como decidir entidades e intenções?" image="https://www.mahdimamouri.com/media/consulting/nlp.png"/>
+        <SideCard title="Documentação" text="Como alterar a API e funções" image="https://code.visualstudio.com/assets/docs/languages/javascript/overview.png"/>
+        <SideCard title="Equipe" text="Conheça nossa equipe de pesquisa!" image="https://ic.unicamp.br/~jreis/media/image1.png"/>
+      </Grid>
     )
 }
 
@@ -56,9 +77,11 @@ export default function UploadPage(props) {
     const classes = useStyles();
     const [settings, setSettings] = React.useState({
         todo: {
-            manual: true,
-            verification: false,
-            download: false,
+          manual: true,
+          verification: true,
+          import_file: true,
+          import_default: false,
+          automatic: true,
         },
         filename: '',
         data: {dialogs: []},
@@ -186,32 +209,19 @@ export default function UploadPage(props) {
             dialogs: 0,
         })
     }
-
-
     return(
         <main className={classes.dropzone}>
-            <Grid container direction="row" justifyContent="center" alignItems="center" spacing={2} style={{paddingBottom: '2rem'}}>
-                <IntroCard
-                    title="Como a ferramenta funciona"
-                    subtitle="O que é Active Learning e como utilizar para anotar seu dataset"
-                />
-                <IntroCard
-                    title="Como instalar a sua versão da ferramenta"
-                    subtitle="Para usar treinar seu chatbot"
-                />
-            </Grid>
-            <DropzoneAreaBase
-                dropzoneText="Adicione as conversas do seu Chatbot"
-                onAdd={(fileObjs) => {handleFile(fileObjs)}}
-                />
-            <Button variant="contained" color="primary" className={classes.continueButton} onClick={() => seeExample()}>
-                Veja os dados de Exemplo
+            <Cards />
+            <Button variant="contained" color="primary" style={{marginBottom:'1rem'}} onClick={() => seeExample()}>
+                Dados de Exemplo
             </Button>
+            <DropzoneAreaBase
+              dropzoneText="Adicione as conversas do seu Chatbot"
+              onAdd={(fileObjs) => {handleFile(fileObjs)}}
+              />
             <Dialog
                 open={settings.open}
                 onClose={() => setSettings({...settings, data: {dialogs: []}, open: false})}
-                aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
                 maxWidth='sm'
                 fullWidth={true}
                 >
@@ -220,17 +230,59 @@ export default function UploadPage(props) {
                         {"Arquivo " + settings.filename}
                     </Typography>
                     <Grid container direction="column" justifyContent="flex-start" alignItems="center">
-                        <Typography variant="h6">
-                            O que você deseja fazer?
-                        </Typography>
                         <FormGroup>
+                          <FormControlLabel
+                            control={<Checkbox checked={settings.todo.import_file} onChange={handleTodo} color="primary" name="import_file" />}
+                            label="Importar Entidades e Intenções do Arquivo"
+                            />
+                          <Typography variant="caption">
+                            Detectamos que o arquivo já possui entidades e intenções
+                          </Typography>
+                          <FormControlLabel
+                            control={<Checkbox checked={settings.todo.import_default} onChange={handleTodo} color="primary" name="import_default" />}
+                            label="Usar Entidades e Intenções Existentes"
+                            />
+                          {settings.todo.import_default?
+                            <React.Fragment>
+                              <FormControl>
+                                <Select
+                                  value={""}
+                                  displayEmpty
+                                  renderValue={(selected) => selected}
+                                  >
+                                  <MenuItem value={""} disabled>
+                                    Selecione para importar
+                                  </MenuItem>
+                                  <MenuItem value={"Placa Errada"}>
+                                    <Checkbox checked={false} />
+                                    <ListItemText primary="Placa Errada" secondary="Entidades de atendimento" />
+                                    <ListItemSecondaryAction>
+                                      <IconButton edge="end">
+                                        <HelpOutlineIcon />
+                                      </IconButton>
+                                    </ListItemSecondaryAction>
+                                  </MenuItem>
+                                  <MenuItem value={"Fatura"}>
+                                    <Checkbox checked={false} />
+                                    <ListItemText primary="Fatura" secondary="Intenções de consultoria"/>
+                                    <ListItemSecondaryAction>
+                                      <IconButton edge="end">
+                                        <HelpOutlineIcon />
+                                      </IconButton>
+                                    </ListItemSecondaryAction>
+                                  </MenuItem>
+                                </Select>
+                                <FormHelperText>Listas de intenções e entidades disponíveis</FormHelperText>
+                              </FormControl>
+                            </React.Fragment>
+                          :null}
                             <FormControlLabel
-                            control={<Switch disabled checked={settings.todo.manual} onChange={handleTodo} color="primary" name="manual" />}
+                            control={<Checkbox checked={settings.todo.manual} onChange={handleTodo} color="primary" name="manual" />}
                             label="Anotação Manual"
                             />
                             {settings.todo.manual?
-                                <>
-                                    <Slider value={settings.range} onChange={handleRange} aria-labelledby="range-slider"
+                                <React.Fragment>
+                                    <Slider value={settings.range} onChange={handleRange}
                                         step={1}
                                         min={0}
                                         max={settings.data.dialogs.length-1}
@@ -240,20 +292,45 @@ export default function UploadPage(props) {
                                     <Typography variant="caption">
                                         Você anotará <b>{Math.floor(settings.range[1]-settings.range[0])}</b> dialogos (ID{settings.data.dialogs[settings.range[0]]?settings.data.dialogs[settings.range[0]].id:0} - ID{settings.data.dialogs[settings.range[1]]?settings.data.dialogs[settings.range[1]].id:0})
                                     </Typography>
-                                </>
+                                </React.Fragment>
                             :null}
-                            <FormControlLabel
-                            control={<Switch disabled checked={settings.todo.verification} onChange={handleTodo} color="primary" name="verification" />}
-                            label="Active Learning"
-                            />
-                            <FormControlLabel
-                            control={<Switch disabled checked={settings.todo.download} onChange={handleTodo} color="primary" name="download" />}
-                            label="Donwload do Dataset"
-                            />
-                        </FormGroup>
+                            <FormControlLabel label="Active Learning" control={<Checkbox checked={settings.todo.verification} onChange={handleTodo} color="primary" name="verification" />}/>
+                            {settings.todo.verification?
+                              <React.Fragment>
+                                <FormControl>
+                                  <Select
+                                    value={""}
+                                    renderValue={(selected) => selected}
+                                    >
+                                    <MenuItem value={"BERT Vanilla"}>
+                                      <Checkbox checked={false} />
+                                      <ListItemText primary="BERT Vanilla" secondary="BERT para testes" />
+                                      <ListItemSecondaryAction>
+                                        <IconButton edge="end">
+                                          <HelpOutlineIcon />
+                                        </IconButton>
+                                      </ListItemSecondaryAction>
+                                    </MenuItem>
+                                    <MenuItem value={"BERT ConnectCar"}>
+                                      <Checkbox checked={false} />
+                                      <ListItemText primary="BERT ConnectCar" secondary="BERT da ConnectCar"/>
+                                      <ListItemSecondaryAction>
+                                        <IconButton edge="end">
+                                          <HelpOutlineIcon />
+                                        </IconButton>
+                                      </ListItemSecondaryAction>
+                                    </MenuItem>
+                                  </Select>
+                                  <FormHelperText>Servidores disponíveis para anotação automática</FormHelperText>
+                                </FormControl>
+                                {/* <FormControlLabel label="Envio automático" control={<Checkbox checked={settings.todo.automatic} onChange={handleTodo} color="primary" name="automatic" />}/>
+                                <FormHelperText>Conforme você anota, ele enviará para a IA</FormHelperText> */}
+                              </React.Fragment>
+                            :null}
+                          </FormGroup>
                         {!settings.todo.manual && !settings.todo.verification?
                         <Typography variant="caption">
-                            A IA pré-treinada fará <b>toda a anotação</b> para você
+                            A IA pré-treinada fará <b>toda a anotação</b> para você, sem verificação.
                         </Typography>
                         :settings.todo.manual && !settings.todo.verification?
                         <Typography variant="caption">
