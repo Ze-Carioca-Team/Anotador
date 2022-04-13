@@ -1,3 +1,6 @@
+/* ****************************************************
+index.tsx takes care of the theming 
+**************************************************** */
 // Generic imports modules should be done by alphabetic order
 import './index.css';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -8,6 +11,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 // Component imports. Toolbar is userful for language and theme
 import AssisToolbar from './Common/AssisToolbar';
+import Pages from './Pages/Pages';
 
 // Creates Context for Toolbar to update mode and language
 export const ThemeContext = React.createContext({ toggleColorMode: ()=>{}})
@@ -40,6 +44,7 @@ function Assis(){
       <ThemeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
             <AssisToolbar/>
+            <Pages />
         </ThemeProvider>
       </ThemeContext.Provider>
     </React.StrictMode>
