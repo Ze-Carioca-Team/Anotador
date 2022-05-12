@@ -1,3 +1,7 @@
+/* ****************************************************
+Toolbar takes care of generating the toolbar and 
+change the theme mode
+**************************************************** */
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
@@ -11,11 +15,14 @@ import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
-import { ThemeContext } from '../index'
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
+// Imports context
+import { ThemeContext } from '../index'
+
+// A dialog to help people understand the program
 function HelpDialog(){
   return(
     <React.Fragment>
@@ -30,6 +37,7 @@ function HelpDialog(){
   )
 }
 
+// Generates Toolbar
 export default function AssisToolbar(){
   // Gets theme to check if its dark or light
   const mode = useTheme().palette.mode;
@@ -58,10 +66,6 @@ export default function AssisToolbar(){
             <GitHubIcon />
           </IconButton>
         </Tooltip>
-        {/* <Select color="secondary" size="small" value="pt">
-          <MenuItem value="pt">PT</MenuItem>
-          <MenuItem value="en">EN</MenuItem>
-        </Select> */}
       </Toolbar>
     </AppBar>
   )

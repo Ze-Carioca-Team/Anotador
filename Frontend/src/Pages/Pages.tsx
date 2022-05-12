@@ -2,8 +2,9 @@
 Pages.tsx takes care of the state variables and calls
 the current view ("page") and other tools.
 **************************************************** */
-import { any } from 'prop-types';
+import Container from '@mui/material/Container';
 import React from 'react';
+
 
 import Upload from './Upload/Upload';
 
@@ -41,8 +42,9 @@ export default function Pages(){
   }
   return(
     <PagesContext.Provider value={{ filename, setFilename }}>
-      {filename}
-      {generateView()}
+      <Container maxWidth="lg" style={{paddingTop:'1.5rem'}}>
+        {generateView()}
+      </Container>
     </PagesContext.Provider>
   )
 }
