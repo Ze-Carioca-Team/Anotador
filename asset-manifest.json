@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/Assis/static/css/main.96433c1b.chunk.css",
-    "main.js": "/Assis/static/js/main.1b5fb024.chunk.js",
-    "main.js.map": "/Assis/static/js/main.1b5fb024.chunk.js.map",
+    "main.js": "/Assis/static/js/main.fc557794.chunk.js",
+    "main.js.map": "/Assis/static/js/main.fc557794.chunk.js.map",
     "runtime-main.js": "/Assis/static/js/runtime-main.d8844cfd.js",
     "runtime-main.js.map": "/Assis/static/js/runtime-main.d8844cfd.js.map",
     "static/css/2.3f1cd48b.chunk.css": "/Assis/static/css/2.3f1cd48b.chunk.css",
-    "static/js/2.c0c16885.chunk.js": "/Assis/static/js/2.c0c16885.chunk.js",
-    "static/js/2.c0c16885.chunk.js.map": "/Assis/static/js/2.c0c16885.chunk.js.map",
+    "static/js/2.7894c3c7.chunk.js": "/Assis/static/js/2.7894c3c7.chunk.js",
+    "static/js/2.7894c3c7.chunk.js.map": "/Assis/static/js/2.7894c3c7.chunk.js.map",
     "index.html": "/Assis/index.html",
     "static/css/2.3f1cd48b.chunk.css.map": "/Assis/static/css/2.3f1cd48b.chunk.css.map",
     "static/css/main.96433c1b.chunk.css.map": "/Assis/static/css/main.96433c1b.chunk.css.map",
-    "static/js/2.c0c16885.chunk.js.LICENSE.txt": "/Assis/static/js/2.c0c16885.chunk.js.LICENSE.txt"
+    "static/js/2.7894c3c7.chunk.js.LICENSE.txt": "/Assis/static/js/2.7894c3c7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d8844cfd.js",
     "static/css/2.3f1cd48b.chunk.css",
-    "static/js/2.c0c16885.chunk.js",
+    "static/js/2.7894c3c7.chunk.js",
     "static/css/main.96433c1b.chunk.css",
-    "static/js/main.1b5fb024.chunk.js"
+    "static/js/main.fc557794.chunk.js"
   ]
 }
