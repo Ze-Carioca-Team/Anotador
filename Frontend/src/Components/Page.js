@@ -11,7 +11,6 @@ import StepLabel from '@material-ui/core/StepLabel';
 
 import Footer from './Common/Footer.js';
 import TitleToolbar from './Common/TitleToolbar.js';
-import Forms from './Common/Forms.js';
 import AnnotationPage from './Pages/AnnotationPage.js';
 import LearningPage from './Pages/LearningPage.js';
 import DownloadPage from './Pages/DownloadPage.js';
@@ -43,50 +42,47 @@ export default function Page() {
       learning: -1,
       dataLearning: {},
       metaLearning: [],
-      forms: true,
     });
     function handleStep(nstep){
-      if(nstep==2){
-        setInfo({...info, step: -1});
-      }
-      else{
-        setInfo({...info, step: nstep});
-      }
+      setInfo({...info, step: nstep});
     }
     const sendInfo = {info, setInfo}
     return (
         <MuiThemeProvider theme={themeLight}>
+            {console.log(info)}
             <CssBaseline />
             <div style={{minHeight:'97vh'}}>
                 <Container maxWidth="lg">
                     <TitleToolbar />
                 </Container>
-                <Forms {...sendInfo}/> 
                 <div style={{paddingRight:'1rem',paddingLeft:'3rem'}}>
-                    {0 <= info.step && info.step <= 2? 
+                    {0 <= info.step && info.step <= 3? 
                         <main>
                             <Grid container xs={12} direction="column" justifyContent="flex-start" alignItems="center">
-                                {/* <Grid item xs={6}>
+                                <Grid item xs={6}>
                                     <Stepper activeStep={info.step} alternativeLabel style={{ backgroundColor: "transparent" }}>
                                         <Step key={0}>
-                                            <StepLabel>Anotar</StepLabel>
+                                            <StepLabel>Anotador</StepLabel>
                                         </Step>
                                         <Step key={1}>
+                                            <StepLabel>Active Learning</StepLabel>
+                                        </Step>
+                                        <Step key={2}>
                                             <StepLabel>Baixar</StepLabel>
                                         </Step>
                                     </Stepper>
-                                </Grid> */}
-                                <Grid item xs={12} style={{paddingTop:'1rem'}}>
+                                </Grid>
+                                <Grid item xs={12}>
                                     <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
                                         <Button onClick={() => {handleStep(info.step-1)}}>Voltar</Button>
-                                        <Button onClick={() => {handleStep(info.step+1)}}>Avançar</Button>
+                                        <Button disabled={info.step>=2} onClick={() => {handleStep(info.step+1)}}>Avançar</Button>
                                     </ButtonGroup>
                                 </Grid>
                                 {info.step === 0?
                                     <AnnotationPage {...sendInfo}/>
-                                // :info.step === 1?
-                                //     <LearningPage {...sendInfo}/>
                                 :info.step === 1?
+                                    <LearningPage {...sendInfo}/>
+                                :info.step === 2?
                                     <DownloadPage {...sendInfo}/>
                                 :
                                     <ErrorPage />
