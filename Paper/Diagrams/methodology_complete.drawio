@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-01T13:12:33.059Z" agent="5.0 (X11)" etag="ahLkju05z1tBMOZwpAnG" version="18.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-01T13:19:00.492Z" agent="5.0 (X11)" etag="wEC3XYktWzTgd0pWl7D3" version="18.2.0" type="github">
   <diagram id="UwwP2Qq3AzNfzOclVscV" name="Page-1">
     <mxGraphModel dx="2423" dy="1466" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -437,40 +437,29 @@
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-103" value="Etapa de Configuração" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="-1430" y="-67.5" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-104" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="GT-CHdWPAFGHRpYFUDZQ-109">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1370" y="20" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-105" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="GT-CHdWPAFGHRpYFUDZQ-107">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1370" y="20" as="sourcePoint" />
-            <mxPoint x="-1410" y="-80" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-106" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-107">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1000" y="20" as="targetPoint" />
+            <mxPoint x="-890" y="120" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-1020" y="-10" />
-              <mxPoint x="-1020" y="20" />
+              <mxPoint x="-910" y="90" />
+              <mxPoint x="-910" y="120" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-107" value="Importar entidades" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" vertex="1" parent="1">
-          <mxGeometry x="-1120" y="-30" width="80" height="40" as="geometry" />
+          <mxGeometry x="-1010" y="70" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-108" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-109">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1000" y="20" as="targetPoint" />
+            <mxPoint x="-890" y="120" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-1020" y="50" />
-              <mxPoint x="-1020" y="20" />
+              <mxPoint x="-910" y="150" />
+              <mxPoint x="-910" y="120" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-109" value="Importar intenções" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" vertex="1" parent="1">
-          <mxGeometry x="-1120" y="30" width="80" height="40" as="geometry" />
+          <mxGeometry x="-1010" y="130" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-110" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-111">
           <mxGeometry relative="1" as="geometry">
@@ -490,7 +479,7 @@
           <mxGeometry x="-1680" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-115" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fontSize=10;strokeColor=default;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-1420" y="160" width="440" height="150" as="geometry" />
+          <mxGeometry x="-1370" y="350" width="440" height="150" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-116" value="(Opcional) input de endpoint de anot. automática" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" vertex="1" parent="1">
           <mxGeometry x="-1560" y="60" width="80" height="40" as="geometry" />
@@ -519,6 +508,9 @@
               <mxPoint x="-1580" y="140" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-121" value="Endpoint de anotação automática?" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-1450" y="60" width="80" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
