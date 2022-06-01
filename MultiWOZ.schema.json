@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ZeCariocaUnicamp/Assis/main/MultiWOZ.schema.json",
+  "type": "object",
+  "properties": {
+    "ontology": {
+      "type": "object",
+      "properties": {
+        "intents": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "actions": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "slot-values": {
+          "type": "object",
+          "properties": {},
+        }
+      },
+      "required": [
+        "intents",
+        "actions",
+        "slot-values"
+      ]
+    },
+    "dialogs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "dialog_domain": {
+              "type": "string"
+            },
+            "turns": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "speaker": {
+                      "type": "string"
+                    },
+                    "utterance": {
+                      "type": "string"
+                    },
+                    "utterance_delex": {
+                      "type": "string"
+                    },
+                    "action": {
+                      "type": "string"
+                    },
+                    "slot-values": {
+                      "type": "object",
+                      "properties": {},
+                    "turn-num": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "speaker",
+                    "utterance",
+                    "utterance_delex",
+                    "action",
+                    "slot-values",
+                    "turn-num"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "speaker": {
+                      "type": "string"
+                    },
+                    "utterance": {
+                      "type": "string"
+                    },
+                    "utterance_delex": {
+                      "type": "string"
+                    },
+                    "intent": {
+                      "type": "string"
+                    },
+                    "slot-values": {
+                      "type": "object",
+                      "properties": {
+                        "cliente": {
+                          "type": "string"
+                        }
+                      },
+                    },
+                    "turn-num": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "speaker",
+                    "utterance",
+                    "utterance_delex",
+                    "intent",
+                    "slot-values",
+                    "turn-num"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "dialog_domain",
+            "turns"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "ontology",
+    "dialogs"
+  ]
+}
+
