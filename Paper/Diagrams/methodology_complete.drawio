@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-01T13:08:44.926Z" agent="5.0 (X11)" etag="PyCMEDjwXcj6_7GH0MrK" version="18.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-01T13:12:33.059Z" agent="5.0 (X11)" etag="ahLkju05z1tBMOZwpAnG" version="18.2.0" type="github">
   <diagram id="UwwP2Qq3AzNfzOclVscV" name="Page-1">
     <mxGraphModel dx="2423" dy="1466" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -472,23 +472,53 @@
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-109" value="Importar intenções" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" vertex="1" parent="1">
           <mxGeometry x="-1120" y="30" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-110" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-111" target="GT-CHdWPAFGHRpYFUDZQ-112">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-110" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-111">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1460" y="20" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-111" value="Checar formatação Json" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" vertex="1" parent="1">
-          <mxGeometry x="-1550" width="80" height="40" as="geometry" />
+          <mxGeometry x="-1560" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-112" value="Checar ontologia" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" vertex="1" parent="1">
-          <mxGeometry x="-1450" width="80" height="40" as="geometry" />
+          <mxGeometry x="-1460" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-113" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-114" target="GT-CHdWPAFGHRpYFUDZQ-111">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-114" value="Entrada de Dados" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;fillColor=#CCCCCC;" vertex="1" parent="1">
-          <mxGeometry x="-1650" width="80" height="40" as="geometry" />
+          <mxGeometry x="-1680" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-115" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fontSize=10;strokeColor=default;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-1630" y="130" width="440" height="150" as="geometry" />
+          <mxGeometry x="-1420" y="160" width="440" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-116" value="(Opcional) input de endpoint de anot. automática" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-1560" y="60" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-117" value="(Opcional) user configura importação" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-1560" y="120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-118" value="" style="endArrow=classic;html=1;rounded=0;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-114" target="GT-CHdWPAFGHRpYFUDZQ-116">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1360" y="50" as="sourcePoint" />
+            <mxPoint x="-1310" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-1580" y="20" />
+              <mxPoint x="-1580" y="50" />
+              <mxPoint x="-1580" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-119" value="" style="endArrow=classic;html=1;rounded=0;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-114" target="GT-CHdWPAFGHRpYFUDZQ-117">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1590" y="30" as="sourcePoint" />
+            <mxPoint x="-1550" y="90" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-1580" y="20" />
+              <mxPoint x="-1580" y="60" />
+              <mxPoint x="-1580" y="140" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
