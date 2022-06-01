@@ -1,1 +1,79 @@
-<mxfile host="app.diagrams.net" modified="2022-06-01T08:40:34.835Z" agent="5.0 (X11)" version="18.2.0" etag="7NsRohcSBexXWHc99kmg" type="github"><diagram id="oAJdKiYyYe6bpVS6prKH">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-06-01T08:54:02.016Z" agent="5.0 (X11)" etag="U1M8WFuogf2i0m6iPJV5" version="18.2.0" type="github">
+  <diagram id="oAJdKiYyYe6bpVS6prKH" name="Page-1">
+    <mxGraphModel dx="599" dy="303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-27" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="30" width="130" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-7" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="30" width="215" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-6" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="30" width="100" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-1" value="Chat tools" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="80" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-2" value="Mined data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="160" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-3" value="Chatbot endpoints" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-4" value="MultiWOZ dataset" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="200" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-5" value="Manual Annotation Tools" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="90" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-9" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;...&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="250" y="240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-10" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Data Acquisition&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="250" y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-12" value="Assis Annonation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="471.25" y="40" width="122.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-14" value="Automatic Annotation Tools" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="180" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-17" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="uoHW2_MDEuEodbXvVXq1-6" target="uoHW2_MDEuEodbXvVXq1-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="180" as="sourcePoint" />
+            <mxPoint x="450" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-18" value="Json in MultiWOZ format" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="350" y="115" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-19" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontSize=11;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="uoHW2_MDEuEodbXvVXq1-14" target="uoHW2_MDEuEodbXvVXq1-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="180" as="sourcePoint" />
+            <mxPoint x="510" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-21" value="Transfer of information in MultiWOZ format" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="500" y="140" width="116.25" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-24" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="uoHW2_MDEuEodbXvVXq1-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="149.65999999999994" as="sourcePoint" />
+            <mxPoint x="680" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-28" value="AI Chatbots learning phase" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="130" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-30" value="Implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="723.75" y="40" width="122.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-33" value="Annotated Json in MultiWOZ format" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="650" y="110" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
