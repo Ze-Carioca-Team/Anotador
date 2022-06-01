@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/ZeCariocaUnicamp/Assis/main/multiwoz.schema.json",
+  "$id": "https://raw.githubusercontent.com/ZeCariocaUnicamp/Assis/Paper/main/multiwoz.schema.json",
   "type": "object",
   "properties": {
     "ontology": {
