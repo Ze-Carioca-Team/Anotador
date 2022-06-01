@@ -1,0 +1,40 @@
+{
+  "ontology": {
+    "intents": ["info_nome"],
+    "actions": ["req_nome","cumprimento"],
+    "slot-values": {
+      "cliente": ["Gean"],
+      "atendente": ["Tarcisio"],
+      "empresa": ["Assis Veiculos"]
+    }
+  },
+  "dialogs": [
+    {
+      "id": 1234,
+      "dialog_domain": "creditos_placa_errada",
+      "turns": [
+        {
+          "speaker": "agent",
+          "utterance": "Seja Bem vindo a Assis Veiculos. Meu nome é Tarcisio, com quem eu falo? Olá, você ainda está Online?",
+          "utterance_delex": "Seja Bem vindo a [empresa]. Meu nome é [atendente], com quem eu falo? Olá, você ainda está Online?",
+          "action": "[cumprimento][req_nome]",
+          "slot-values": {
+            "atendente": "Tarcisio",
+            "empresa": "Assis Veiculos"
+          },
+          "turn-num": 1
+        },
+        {
+          "speaker": "client",
+          "utterance": "Olá. Gean.",
+          "utterance_delex": "Olá. [cliente].",
+          "intent": "[info_nome]",
+          "slot-values": {
+            "cliente": "Gean"
+          },
+          "turn-num": 2
+        }
+      ]
+    }
+  ]
+}
