@@ -65,9 +65,6 @@ export default function Page() {
                                             <StepLabel>Anotador</StepLabel>
                                         </Step>
                                         <Step key={1}>
-                                            <StepLabel>Active Learning</StepLabel>
-                                        </Step>
-                                        <Step key={2}>
                                             <StepLabel>Baixar</StepLabel>
                                         </Step>
                                     </Stepper>
@@ -81,8 +78,6 @@ export default function Page() {
                                 {info.step === 0?
                                     <AnnotationPage {...sendInfo}/>
                                 :info.step === 1?
-                                    <LearningPage {...sendInfo}/>
-                                :info.step === 2?
                                     <DownloadPage {...sendInfo}/>
                                 :
                                     <ErrorPage />

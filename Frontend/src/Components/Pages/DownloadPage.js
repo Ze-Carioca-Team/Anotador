@@ -14,8 +14,8 @@ export default function DownloadPage(props) {
     // - Deletar intenções e entidades (usar o marcador)
     function download() {
         const filename = props.info.filename.substring(0,props.info.filename.length-5)+'_anotado.json';
-        let output = props.info.data;
         let meta = props.info.meta;
+        let output = props.info.data;
         let intention_names = props.info.intentions.map((e) => (e.value))
         let entity_names = props.info.entities.map((e) => (e.value))
         output.ontology["slot-values"] = {}
@@ -33,7 +33,6 @@ export default function DownloadPage(props) {
                 // Intenções
                 let intent_type_ont = turn.intent?'intents':'actions'
                 let intent_type = turn["turn-num"]%2?'action':'intent'
-                console.log(intent_type);
                 turn[intent_type] = ''
                 for(let i=0;i<turn_meta.intentions.length;i++){
                     let intention = intention_names[turn_meta.intentions[i]]
@@ -88,6 +87,16 @@ export default function DownloadPage(props) {
                 turn["utterance_delex"] = final_delex;
             }
         }
+        // Deletes dialogues 92968
+        var before = output["dialogs"].length;
+        output["dialogs"] = output["dialogs"].filter((diag, i)=>{
+            return meta[i].status !== "deleted";
+        });
+        meta = meta.filter((diag, i)=>{
+            return diag.status !== "deleted";
+        });
+        var after = output["dialogs"].length
+        alert("Check: "+(before-after)+" dialogs deleted")
         var file = new Blob([JSON.stringify(output,undefined,2)], {type: "application/json"});
         if (window.navigator.msSaveOrOpenBlob) // IE10+
             window.navigator.msSaveOrOpenBlob(file, filename);
