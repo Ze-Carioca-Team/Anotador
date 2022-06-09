@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-09T06:00:23.873Z" agent="5.0 (X11)" etag="Lay6KzOCkELLCF2-3tm7" version="18.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-09T06:07:08.370Z" agent="5.0 (X11)" etag="CmQwPNqxZ-znZT7Fccvl" version="18.2.0" type="github">
   <diagram id="UwwP2Qq3AzNfzOclVscV" name="Page-1">
     <mxGraphModel dx="2566" dy="1539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -437,40 +437,37 @@
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-103" value="Etapa de Configuração" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-1430" y="-67.5" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-106" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-107" edge="1">
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-106" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-890" y="120" as="targetPoint" />
+            <mxPoint x="-1139" y="49" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-910" y="90" />
-              <mxPoint x="-910" y="120" />
+              <mxPoint x="-1159" y="19" />
+              <mxPoint x="-1159" y="49" />
             </Array>
+            <mxPoint x="-1179" y="19" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-107" value="Importar entidades" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
-          <mxGeometry x="-1010" y="70" width="80" height="40" as="geometry" />
+          <mxGeometry x="-920" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-108" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-109" edge="1">
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-108" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-890" y="120" as="targetPoint" />
+            <mxPoint x="-1139" y="49" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-910" y="150" />
-              <mxPoint x="-910" y="120" />
+              <mxPoint x="-1159" y="79" />
+              <mxPoint x="-1159" y="49" />
             </Array>
+            <mxPoint x="-1179" y="79" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-109" value="Importar intenções" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
-          <mxGeometry x="-1010" y="130" width="80" height="40" as="geometry" />
+          <mxGeometry x="-920" y="60" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-110" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-111" target="GT-CHdWPAFGHRpYFUDZQ-112" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1460" y="160" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-111" target="GT-CHdWPAFGHRpYFUDZQ-131">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-111" value="Checar formatação Json" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
-          <mxGeometry x="-1370" y="140" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-112" value="Checar ontologia" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
-          <mxGeometry x="-1210" y="170" width="80" height="40" as="geometry" />
+          <mxGeometry x="-1140" y="30" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-126" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-114" target="GT-CHdWPAFGHRpYFUDZQ-116" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -500,23 +497,35 @@
             <mxPoint x="-1260" y="20" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-133" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-121" target="GT-CHdWPAFGHRpYFUDZQ-111" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-121" target="GT-CHdWPAFGHRpYFUDZQ-137">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1335" y="80" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-121" value="Endpoint configurado?" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
           <mxGeometry x="-1375" y="-20" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-131" value="Importar ontologia remota" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
-          <mxGeometry x="-1080" y="-60" width="80" height="40" as="geometry" />
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-131" target="GT-CHdWPAFGHRpYFUDZQ-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-131" target="GT-CHdWPAFGHRpYFUDZQ-109">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1000" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-131" value="Checar Importar ontologia" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
+          <mxGeometry x="-1040" y="30" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-134" value="Sim" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-1295" width="30" height="15" as="geometry" />
         </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-135" value="Ferramenta tria diálogos relevantes" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-135" value="Ferramenta tria diálogos relevantes do banco de dados" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;strokeColor=default;" parent="1" vertex="1">
           <mxGeometry x="-1260" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-137" value="Enviar dialogos" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
-          <mxGeometry x="-1200" y="60" width="80" height="40" as="geometry" />
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-137" value="Usuário envia diálogos" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;strokeColor=default;" parent="1" vertex="1">
+          <mxGeometry x="-1260" y="60" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="-UZiajmJjqbnYDhWoxUk-1" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="-245" width="130" height="240" as="geometry" />
@@ -539,7 +548,7 @@
         <mxCell id="-UZiajmJjqbnYDhWoxUk-7" value="Dataset MultiWOZ " style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="120" y="-75" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="-UZiajmJjqbnYDhWoxUk-8" value="Manual Annotation Tools" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-8" value="Ferramentas de anotação manual" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="-185" width="110" height="40" as="geometry" />
         </mxCell>
         <mxCell id="-UZiajmJjqbnYDhWoxUk-9" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;...&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" vertex="1" parent="1">
@@ -551,7 +560,7 @@
         <mxCell id="-UZiajmJjqbnYDhWoxUk-11" value="Anotação Assis" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="351.25" y="-235" width="122.5" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-UZiajmJjqbnYDhWoxUk-12" value="Automatic Annotation Tools" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-12" value="Ferramentas de anotação automática" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="-95" width="110" height="40" as="geometry" />
         </mxCell>
         <mxCell id="-UZiajmJjqbnYDhWoxUk-13" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="-UZiajmJjqbnYDhWoxUk-3" target="-UZiajmJjqbnYDhWoxUk-2">
@@ -569,7 +578,7 @@
             <mxPoint x="390" y="-145" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-UZiajmJjqbnYDhWoxUk-16" value="Transfer of information in MultiWOZ format" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-16" value="Transferência de informação no formato MultiWOZ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="380" y="-135" width="116.25" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-UZiajmJjqbnYDhWoxUk-17" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="-UZiajmJjqbnYDhWoxUk-1">
@@ -586,6 +595,32 @@
         </mxCell>
         <mxCell id="-UZiajmJjqbnYDhWoxUk-20" value="JSON anotado no formato MultiWOZ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="530" y="-165" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-21" value="Não" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="-1330" y="60" width="30" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-27" value="Entrada de Dados" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;fillColor=#CCCCCC;" vertex="1" parent="1">
+          <mxGeometry x="-800" y="30" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-800" y="50" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-820" y="20" />
+              <mxPoint x="-820" y="50" />
+            </Array>
+            <mxPoint x="-840" y="20" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-800" y="50" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-820" y="80" />
+              <mxPoint x="-820" y="50" />
+            </Array>
+            <mxPoint x="-840" y="80" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
