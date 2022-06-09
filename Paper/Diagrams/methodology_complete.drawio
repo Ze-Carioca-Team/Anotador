@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2022-06-09T06:07:08.370Z" agent="5.0 (X11)" etag="CmQwPNqxZ-znZT7Fccvl" version="18.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-09T06:13:30.359Z" agent="5.0 (X11)" etag="KLf9u3JjVy-ql-ZE_UOT" version="18.2.0" type="github">
   <diagram id="UwwP2Qq3AzNfzOclVscV" name="Page-1">
     <mxGraphModel dx="2566" dy="1539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-34" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;dashed=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1600" y="-30" width="450" height="140" as="geometry" />
+        </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-88" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;dashed=1;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1560" y="-230" width="430" height="130" as="geometry" />
         </mxCell>
@@ -435,45 +438,45 @@
           <mxGeometry x="-1375" y="-200" width="30" height="15" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-103" value="Etapa de Configuração" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=10;" parent="1" vertex="1">
-          <mxGeometry x="-1430" y="-67.5" width="140" height="30" as="geometry" />
+          <mxGeometry x="-1435" y="-60" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-106" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-106" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-135" edge="1" target="-UZiajmJjqbnYDhWoxUk-33">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-1139" y="49" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-1159" y="19" />
-              <mxPoint x="-1159" y="49" />
+              <mxPoint x="-1170" y="20" />
+              <mxPoint x="-1170" y="20" />
             </Array>
             <mxPoint x="-1179" y="19" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-107" value="Importar entidades" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
-          <mxGeometry x="-920" width="80" height="40" as="geometry" />
+          <mxGeometry x="-760" y="-115" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-108" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+        <mxCell id="GT-CHdWPAFGHRpYFUDZQ-108" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" target="-UZiajmJjqbnYDhWoxUk-33">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-1139" y="49" as="targetPoint" />
             <Array as="points">
               <mxPoint x="-1159" y="79" />
-              <mxPoint x="-1159" y="49" />
+              <mxPoint x="-1159" y="20" />
             </Array>
             <mxPoint x="-1179" y="79" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-109" value="Importar intenções" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
-          <mxGeometry x="-920" y="60" width="80" height="40" as="geometry" />
+          <mxGeometry x="-760" y="-55" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="-UZiajmJjqbnYDhWoxUk-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-111" target="GT-CHdWPAFGHRpYFUDZQ-131">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-111" value="Checar formatação Json" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
-          <mxGeometry x="-1140" y="30" width="80" height="40" as="geometry" />
+          <mxGeometry x="-980" y="-85" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-126" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-114" target="GT-CHdWPAFGHRpYFUDZQ-116" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-114" value="Entrada de Dados" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;fillColor=#CCCCCC;" parent="1" vertex="1">
-          <mxGeometry x="-1680" width="80" height="40" as="geometry" />
+          <mxGeometry x="-1690" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-115" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fontSize=10;strokeColor=default;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1370" y="350" width="440" height="150" as="geometry" />
@@ -512,11 +515,11 @@
         </mxCell>
         <mxCell id="-UZiajmJjqbnYDhWoxUk-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GT-CHdWPAFGHRpYFUDZQ-131" target="GT-CHdWPAFGHRpYFUDZQ-109">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1000" y="150" as="targetPoint" />
+            <mxPoint x="-840" y="35" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-131" value="Checar Importar ontologia" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;" parent="1" vertex="1">
-          <mxGeometry x="-1040" y="30" width="80" height="40" as="geometry" />
+          <mxGeometry x="-880" y="-85" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="GT-CHdWPAFGHRpYFUDZQ-134" value="Sim" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-1295" width="30" height="15" as="geometry" />
@@ -600,27 +603,30 @@
           <mxGeometry x="-1330" y="60" width="30" height="15" as="geometry" />
         </mxCell>
         <mxCell id="-UZiajmJjqbnYDhWoxUk-27" value="Entrada de Dados" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;fillColor=#CCCCCC;" vertex="1" parent="1">
-          <mxGeometry x="-800" y="30" width="80" height="40" as="geometry" />
+          <mxGeometry x="-640" y="-85" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="-UZiajmJjqbnYDhWoxUk-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-800" y="50" as="targetPoint" />
+            <mxPoint x="-640" y="-65" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-820" y="20" />
-              <mxPoint x="-820" y="50" />
+              <mxPoint x="-660" y="-95" />
+              <mxPoint x="-660" y="-65" />
             </Array>
-            <mxPoint x="-840" y="20" as="sourcePoint" />
+            <mxPoint x="-680" y="-95" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-UZiajmJjqbnYDhWoxUk-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-800" y="50" as="targetPoint" />
+            <mxPoint x="-640" y="-65" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-820" y="80" />
-              <mxPoint x="-820" y="50" />
+              <mxPoint x="-660" y="-35" />
+              <mxPoint x="-660" y="-65" />
             </Array>
-            <mxPoint x="-840" y="80" as="sourcePoint" />
+            <mxPoint x="-680" y="-35" as="sourcePoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="-UZiajmJjqbnYDhWoxUk-33" value="Etapa de Importação" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;strokeColor=default;fillColor=#CCCCCC;" vertex="1" parent="1">
+          <mxGeometry x="-1130" width="80" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
