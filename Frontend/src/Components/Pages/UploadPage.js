@@ -312,9 +312,9 @@ export default function UploadPage(props) {
                                         </IconButton>
                                       </ListItemSecondaryAction>
                                     </MenuItem>
-                                    <MenuItem value={"BERT ConnectCar"}>
+                                    <MenuItem value={"BERT EmpresaXY"}>
                                       <Checkbox checked={false} />
-                                      <ListItemText primary="BERT ConnectCar" secondary="BERT da ConnectCar"/>
+                                      <ListItemText primary="BERT EmpresaXY" secondary="BERT da EmpresaXY (necessita de hash)"/>
                                       <ListItemSecondaryAction>
                                         <IconButton edge="end">
                                           <HelpOutlineIcon />
