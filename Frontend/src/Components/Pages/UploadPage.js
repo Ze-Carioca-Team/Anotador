@@ -1,6 +1,8 @@
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -31,26 +33,40 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function IntroCard(props){
-    const classes = useStyles();
+function SideCard(props){
     return(
-        <Grid item xs={12} md={6}>
-            <Card className={classes.card}>
+      <Grid item xs={6}>
+        <Card xs={6}>
+          <CardActionArea href={"https://unicamp-cit.notion.site/unicamp-cit/CI-T-Unicamp-ca7a3fc10d9a43f09a14c5dd4d31e554"}>
+            <div style={{display: 'flex'}}>
+              <CardMedia style={{width: 100}} image={props.image}/>
+              <div style={{display: 'flex', flexDirection: 'column'}}>
                 <CardContent>
-                    <Typography component="h2" variant="h5">
-                        {props.title}
-                    </Typography>
-                    <Typography variant="subtitle1" color="textSecondary">
-                        {props.subtitle}
-                    </Typography>
-                    <Typography variant="subtitle1" color="primary">
-                        Ler mais
-                    </Typography>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {props.title}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    {props.text}
+                  </Typography>
                 </CardContent>
-            </Card>
-        </Grid>
+              </div>
+            </div>
+          </CardActionArea>
+        </Card>
+      </Grid>
     )
-}
+  }
+  
+  function Cards(){
+      return(
+        <Grid container direction="row" justifyContent="center" alignItems="center" spacing={2} style={{paddingBottom: '2rem', textAlign: 'left'}}>   
+          <SideCard title="Tutorial" text="Aprenda a usar a ferramenta" image="https://www.pythontutorial.net/wp-content/uploads/2020/11/tkinter-tutorial.png"/>
+          <SideCard title="Metodologia" text="Como decidir entidades e intenções?" image="https://www.mahdimamouri.com/media/consulting/nlp.png"/>
+          <SideCard title="Documentação" text="Como alterar a API e funções" image="https://code.visualstudio.com/assets/docs/languages/javascript/overview.png"/>
+          <SideCard title="Equipe" text="Conheça nossa equipe de pesquisa!" image="https://ic.unicamp.br/~jreis/media/image1.png"/>
+        </Grid>
+      )
+  }
 
 export default function UploadPage(props) {
     const classes = useStyles();
@@ -191,14 +207,7 @@ export default function UploadPage(props) {
     return(
         <main className={classes.dropzone}>
             <Grid container direction="row" justifyContent="center" alignItems="center" spacing={2} style={{paddingBottom: '2rem'}}>
-                <IntroCard
-                    title="Como a ferramenta funciona"
-                    subtitle="O que é Active Learning e como utilizar para anotar seu dataset"
-                />
-                <IntroCard
-                    title="Como instalar a sua versão da ferramenta"
-                    subtitle="Para usar treinar seu chatbot"
-                />
+                <Cards />
             </Grid>
             <DropzoneAreaBase
                 dropzoneText="Adicione as conversas do seu Chatbot"
@@ -238,7 +247,7 @@ export default function UploadPage(props) {
                                         valueLabelDisplay="auto"
                                     />
                                     <Typography variant="caption">
-                                        Você anotará <b>{Math.floor(settings.range[1]-settings.range[0])}</b> dialogos (ID{settings.data.dialogs[settings.range[0]]?settings.data.dialogs[settings.range[0]].id:0} - ID{settings.data.dialogs[settings.range[1]]?settings.data.dialogs[settings.range[1]].id:0})
+                                        Você anotará <b>{Math.floor(settings.range[1]-settings.range[0])+1}</b> dialogos (ID{settings.data.dialogs[settings.range[0]]?settings.data.dialogs[settings.range[0]].id:0} - ID{settings.data.dialogs[settings.range[1]]?settings.data.dialogs[settings.range[1]].id:0})
                                     </Typography>
                                 </>
                             :null}

@@ -6,14 +6,18 @@ import Paper from '@material-ui/core/Paper';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 
+import green from '@material-ui/core/colors/green';
+import blue from '@material-ui/core/colors/lightBlue';
+import grey from '@material-ui/core/colors/grey';
+import steel from '@material-ui/core/colors/blueGrey';
+
+
 import EditText from './EditText.js';
 
-const incomingHex = '#E8E8E8'; // '#b5d9a7'
-const outgoingHex = '#C8C8C8'; // '#b9d5f0'
 
 const useStyles = makeStyles({
     incoming: {
-        background: incomingHex,
+        background: props=>props.info.theme==='light'?green[100]:grey[800],
         padding: '18px 20px',
         lineHeight: '26px',
         fontSize: '16px',
@@ -29,13 +33,13 @@ const useStyles = makeStyles({
             width: '0',
             position: 'absolute',
             pointerEvents: 'none',
-            borderBottomColor: incomingHex,
+            borderBottomColor: props=>props.info.theme==='light'?green[100]:grey[800],
             borderWidth: '10px',
             marginLeft: '-10px',
           }
     },
     outgoing:{
-        background: outgoingHex,
+        background: props=>props.info.theme==='light'?blue[100]:steel[800],
         padding: '18px 18px',
         lineHeight: '26px',
         fontSize: '16px',
@@ -51,7 +55,7 @@ const useStyles = makeStyles({
             width: '0',
             position: 'absolute',
             pointerEvents: 'none',
-            borderBottomColor: outgoingHex,
+            borderBottomColor: props=>props.info.theme==='light'?blue[100]:steel[800],
             borderWidth: '10px',
             marginLeft: '-10px',
           }
@@ -59,7 +63,7 @@ const useStyles = makeStyles({
   });
 
 export default function DialogCard(props){
-    const classes = useStyles();
+    const classes = useStyles(props);
     function capitalize(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }

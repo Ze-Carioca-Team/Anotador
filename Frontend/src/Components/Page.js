@@ -5,20 +5,31 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import React from 'react';
 import { MuiThemeProvider, createTheme } from "@material-ui/core/styles";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 
 import Footer from './Common/Footer.js';
 import TitleToolbar from './Common/TitleToolbar.js';
+import Forms from './Common/Forms.js';
 import AnnotationPage from './Pages/AnnotationPage.js';
 import LearningPage from './Pages/LearningPage.js';
 import DownloadPage from './Pages/DownloadPage.js';
 import UploadPage from './Pages/UploadPage.js';
 import ErrorPage from './Pages/ErrorPage.js';
 
-const themeLight = createTheme({
-    
+
+const lighttheme = createTheme({
+    palette: {
+        type: "light",
+        main: '#123'
+    }
+});
+const darktheme = createTheme({
+    palette: {
+        type: "dark",
+    }
 });
 
 export default function Page() {
@@ -42,18 +53,22 @@ export default function Page() {
       learning: -1,
       dataLearning: {},
       metaLearning: [],
+      forms: true,
+      theme: useMediaQuery('(prefers-color-scheme: dark)')?'dark':'light',
+      color:'red',
     });
     function handleStep(nstep){
       setInfo({...info, step: nstep});
     }
+    
     const sendInfo = {info, setInfo}
     return (
-        <MuiThemeProvider theme={themeLight}>
+        <MuiThemeProvider theme={info.theme === 'light' ? lighttheme : darktheme}>
             {console.log(info)}
             <CssBaseline />
             <div style={{minHeight:'97vh'}}>
                 <Container maxWidth="lg">
-                    <TitleToolbar />
+                    <TitleToolbar {...sendInfo}/>
                 </Container>
                 <div style={{paddingRight:'1rem',paddingLeft:'3rem'}}>
                     {0 <= info.step && info.step <= 3? 
