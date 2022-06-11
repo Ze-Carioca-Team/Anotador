@@ -42,6 +42,7 @@ export default function Tables(props) {
                     <Tab label={"Completos "+props.info.count.finished} {...a11yProps(1)} />
                     <Tab label={"Deletados "+props.info.count.deleted} {...a11yProps(2)} />
                 </Tabs>
+                
                 {table===0?<DialogTable type="active" {...props} />
                 :table===1?<DialogTable type="finished" {...props} />
                 :<DialogTable type="deleted" {...props} />}

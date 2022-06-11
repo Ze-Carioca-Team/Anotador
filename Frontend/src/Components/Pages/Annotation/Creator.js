@@ -40,7 +40,7 @@ export default function Creator(props) {
     }
     return(
         <>
-            <IconButton size='small' onClick={() => {setOpen(true)}}  style={{borderRadius:'0'}}>
+            <IconButton size='small' onClick={() => {setOpen(true)}} >
                 <AddCircleOutlineIcon />
             </IconButton>
             <Dialog

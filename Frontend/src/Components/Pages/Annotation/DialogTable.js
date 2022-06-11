@@ -1,6 +1,7 @@
 import CheckIcon from '@material-ui/icons/Check';
 import CreateIcon from '@material-ui/icons/Create';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 import { makeStyles } from '@material-ui/core/styles';
@@ -43,28 +44,31 @@ export default function DialogTable(props){
             {props.info.data.dialogs.map((entry, index) => {
                 if(props.type===props.info.meta[index].status) 
                     return(
-                        <ListItem>
-                            <ListItemText primary={"ID"+entry.id}/>
-                            <ListItemSecondaryAction>
-                                <IconButton size='small' onClick={()=>select(index)}>
-                                    <CreateIcon />
-                                </IconButton>
-                                {props.info.meta[index].status==="active"?
-                                    <React.Fragment>
-                                        <IconButton size='small' onClick={()=>change(index,"finished")}>
-                                            <CheckIcon />
-                                        </IconButton>
-                                        <IconButton size='small' onClick={()=>change(index,"deleted")}>
-                                            <DeleteOutlineIcon />
-                                        </IconButton>
-                                    </React.Fragment>
-                                :
-                                    <IconButton size='small' onClick={()=>change(index,"active")}>
-                                        <KeyboardReturnIcon />
+                        <React.Fragment>
+                            <Divider component="li" />
+                            <ListItem>
+                                <ListItemText primary={"ID"+entry.id}/>
+                                <ListItemSecondaryAction>
+                                    <IconButton size='small' onClick={()=>select(index)}>
+                                        <CreateIcon />
                                     </IconButton>
-                                }
-                            </ListItemSecondaryAction>
-                        </ListItem>
+                                    {props.info.meta[index].status==="active"?
+                                        <React.Fragment>
+                                            <IconButton size='small' onClick={()=>change(index,"finished")}>
+                                                <CheckIcon />
+                                            </IconButton>
+                                            <IconButton size='small' onClick={()=>change(index,"deleted")}>
+                                                <DeleteOutlineIcon />
+                                            </IconButton>
+                                        </React.Fragment>
+                                    :
+                                        <IconButton size='small' onClick={()=>change(index,"active")}>
+                                            <KeyboardReturnIcon />
+                                        </IconButton>
+                                    }
+                                </ListItemSecondaryAction>
+                            </ListItem>
+                        </React.Fragment>
                     )
                 else
                     return null;
