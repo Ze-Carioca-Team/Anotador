@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-12-15T11:15:43.962Z" agent="5.0 (Windows)" etag="EpkKVH5AfFj1qTy0Uhka" version="20.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-15T11:25:35.466Z" agent="5.0 (Windows)" etag="fo1qzaXn3BNqSjGUbAG4" version="20.7.2" type="github">
   <diagram id="oAJdKiYyYe6bpVS6prKH" name="Page-1">
     <mxGraphModel dx="1434" dy="710" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -8,19 +8,19 @@
           <mxGeometry x="440" y="80" width="140" height="200" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-6" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;rotation=0;direction=south;arcSize=0;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="330" y="80" width="80" height="240" as="geometry" />
+          <mxGeometry x="330" y="80" width="80" height="290" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-1" value="Ferra-mentas de chat" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="170" width="60" height="50" as="geometry" />
+          <mxGeometry x="340" y="190" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-2" value="Dados minerados" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="220" width="60" height="40" as="geometry" />
+          <mxGeometry x="340" y="250" width="60" height="50" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-3" value="Endpoint de chatbots" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="130" width="60" height="40" as="geometry" />
+          <mxGeometry x="340" y="130" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-4" value="&lt;div&gt;Dataset MultiWoZ&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="260" width="60" height="40" as="geometry" />
+          <mxGeometry x="340" y="300" width="60" height="50" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-10" value="Aquisição de dados" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="333.75" y="90" width="72.5" height="30" as="geometry" />
@@ -32,22 +32,22 @@
           <mxGeometry x="455" y="210" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-18" value="&lt;b&gt;Input:&lt;/b&gt; Json no formato MultiWOZ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="345" y="330" width="60" height="30" as="geometry" />
+          <mxGeometry x="340" y="380" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-21" value="Transferência de informação no formato MultiWoZ com metadados anotados" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="451.88" y="390" width="116.25" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dfSitunsThZcjfo4dWiY-4" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;rotation=0;direction=south;arcSize=0;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="600" y="80" width="80" height="240" as="geometry" />
+          <mxGeometry x="600" y="80" width="80" height="290" as="geometry" />
         </mxCell>
         <mxCell id="dfSitunsThZcjfo4dWiY-7" value="&lt;div&gt;Uso dos &lt;br&gt;&lt;/div&gt;&lt;div&gt;dados&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="605" y="85" width="70" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dfSitunsThZcjfo4dWiY-13" value="Treina-mento de IA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="610" y="130" width="60" height="90" as="geometry" />
+          <mxGeometry x="610" y="130" width="60" height="110" as="geometry" />
         </mxCell>
         <mxCell id="dfSitunsThZcjfo4dWiY-14" value="&lt;b&gt;Output:&lt;/b&gt; Json no formato MultiWOZ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="602.5" y="330" width="75" height="30" as="geometry" />
+          <mxGeometry x="602.5" y="380" width="75" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dfSitunsThZcjfo4dWiY-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="dfSitunsThZcjfo4dWiY-19" target="uoHW2_MDEuEodbXvVXq1-14">
           <mxGeometry relative="1" as="geometry" />
@@ -56,7 +56,7 @@
           <mxGeometry x="455" y="130" width="110" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dfSitunsThZcjfo4dWiY-20" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="345" y="290" width="55" height="30" as="geometry" />
+          <mxGeometry x="342.5" y="340" width="55" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dfSitunsThZcjfo4dWiY-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dfSitunsThZcjfo4dWiY-23" target="dfSitunsThZcjfo4dWiY-19">
           <mxGeometry relative="1" as="geometry">
@@ -84,7 +84,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="dfSitunsThZcjfo4dWiY-39" value="Aprimora-&lt;br&gt;mento de&lt;br&gt;IA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="610" y="220" width="60" height="80" as="geometry" />
+          <mxGeometry x="610" y="240" width="60" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dfSitunsThZcjfo4dWiY-46" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="612.5" y="340" width="55" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
