@@ -1,74 +1,90 @@
-<mxfile host="app.diagrams.net" modified="2022-12-15T11:00:37.490Z" agent="5.0 (Windows)" etag="ks_XN8ZIaIyeNnzITpHy" version="20.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-15T11:15:43.962Z" agent="5.0 (Windows)" etag="EpkKVH5AfFj1qTy0Uhka" version="20.7.2" type="github">
   <diagram id="oAJdKiYyYe6bpVS6prKH" name="Page-1">
     <mxGraphModel dx="1434" dy="710" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="dfSitunsThZcjfo4dWiY-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uoHW2_MDEuEodbXvVXq1-7" target="dfSitunsThZcjfo4dWiY-4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-7" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#E6E6E6;" parent="1" vertex="1">
-          <mxGeometry x="1.25" y="330" width="198.75" height="190" as="geometry" />
+          <mxGeometry x="440" y="80" width="140" height="200" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-6" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;rotation=0;direction=south;arcSize=0;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry y="160" width="200" height="120" as="geometry" />
+          <mxGeometry x="330" y="80" width="80" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="uoHW2_MDEuEodbXvVXq1-1" value="Ferramentas de chat" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="100.63" y="190" width="80" height="40" as="geometry" />
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-1" value="Ferra-mentas de chat" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="170" width="60" height="50" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-2" value="Dados minerados" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="20.63" y="230" width="80" height="40" as="geometry" />
+          <mxGeometry x="340" y="220" width="60" height="40" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-3" value="Endpoint de chatbots" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="20.63" y="190" width="80" height="40" as="geometry" />
+          <mxGeometry x="340" y="130" width="60" height="40" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-4" value="&lt;div&gt;Dataset MultiWoZ&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="100.63" y="230" width="80" height="40" as="geometry" />
+          <mxGeometry x="340" y="260" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uoHW2_MDEuEodbXvVXq1-5" value="Ferramentas de anotação manual" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="15" y="360" width="110" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="uoHW2_MDEuEodbXvVXq1-10" value="Acquisão de dados" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry y="160" width="200" height="30" as="geometry" />
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-10" value="Aquisição de dados" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="333.75" y="90" width="72.5" height="30" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-12" value="Anotador Assis" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="33.75" y="330" width="122.5" height="30" as="geometry" />
+          <mxGeometry x="448.75" y="90" width="122.5" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="uoHW2_MDEuEodbXvVXq1-14" value="Ferramentas de anotação automática" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="15" y="460" width="110" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="uoHW2_MDEuEodbXvVXq1-17" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="uoHW2_MDEuEodbXvVXq1-6" target="uoHW2_MDEuEodbXvVXq1-7" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="180" as="sourcePoint" />
-            <mxPoint x="450" y="130" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="uoHW2_MDEuEodbXvVXq1-14" value="Ferramentas de anotação automática implementadas" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="455" y="210" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-18" value="&lt;b&gt;Input:&lt;/b&gt; Json no formato MultiWOZ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="105" y="290" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="uoHW2_MDEuEodbXvVXq1-19" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontSize=11;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="uoHW2_MDEuEodbXvVXq1-14" target="uoHW2_MDEuEodbXvVXq1-5" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="35" y="450" as="sourcePoint" />
-            <mxPoint x="85" y="400" as="targetPoint" />
-          </mxGeometry>
+          <mxGeometry x="345" y="330" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="uoHW2_MDEuEodbXvVXq1-21" value="Transferência de informação no formato MultiWoZ com metadados anotados" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="70" y="415" width="116.25" height="30" as="geometry" />
+          <mxGeometry x="451.88" y="390" width="116.25" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dfSitunsThZcjfo4dWiY-4" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;rotation=0;direction=south;arcSize=0;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="1.25" y="570" width="200" height="110" as="geometry" />
+          <mxGeometry x="600" y="80" width="80" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="dfSitunsThZcjfo4dWiY-7" value="Saída de dados" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="38.75" y="570" width="122.5" height="30" as="geometry" />
+        <mxCell id="dfSitunsThZcjfo4dWiY-7" value="&lt;div&gt;Uso dos &lt;br&gt;&lt;/div&gt;&lt;div&gt;dados&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="605" y="85" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dfSitunsThZcjfo4dWiY-12" value="Outras ferramentas de anotação" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="20.63" y="600" width="80" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dfSitunsThZcjfo4dWiY-13" value="IA em Chatbots" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="100" y="600" width="80" height="60" as="geometry" />
+        <mxCell id="dfSitunsThZcjfo4dWiY-13" value="Treina-mento de IA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="130" width="60" height="90" as="geometry" />
         </mxCell>
         <mxCell id="dfSitunsThZcjfo4dWiY-14" value="&lt;b&gt;Output:&lt;/b&gt; Json no formato MultiWOZ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="105" y="530" width="75" height="30" as="geometry" />
+          <mxGeometry x="602.5" y="330" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dfSitunsThZcjfo4dWiY-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="dfSitunsThZcjfo4dWiY-19" target="uoHW2_MDEuEodbXvVXq1-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dfSitunsThZcjfo4dWiY-19" value="Ferramentas de anotação manual" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="455" y="130" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dfSitunsThZcjfo4dWiY-20" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="345" y="290" width="55" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dfSitunsThZcjfo4dWiY-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dfSitunsThZcjfo4dWiY-23" target="dfSitunsThZcjfo4dWiY-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="504" y="290" />
+              <mxPoint x="430" y="290" />
+              <mxPoint x="430" y="190" />
+              <mxPoint x="510" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfSitunsThZcjfo4dWiY-23" value="Outras ferramentas de anotação " style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="448.75" y="310" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dfSitunsThZcjfo4dWiY-35" value="" style="endArrow=classic;html=1;rounded=0;jumpSize=7;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="161" as="sourcePoint" />
+            <mxPoint x="440" y="161" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfSitunsThZcjfo4dWiY-37" value="" style="endArrow=classic;html=1;rounded=0;jumpSize=7;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="581" y="161" as="sourcePoint" />
+            <mxPoint x="601" y="161" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfSitunsThZcjfo4dWiY-39" value="Aprimora-&lt;br&gt;mento de&lt;br&gt;IA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="220" width="60" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
